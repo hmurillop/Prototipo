@@ -1,0 +1,27 @@
+{
+  "name": "Prototipo",
+  "homepage": "https://github.com/Paradigm01/Prototipo",
+  "authors": [
+    "blinkparadise <ecruzc@ucenfotec.ac.cr>"
+  ],
+  "description": "Primer Prototipo",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.6.4",
+    "angular-ui-router": "^0.4.2",
+    "oclazyload": "^1.1.0",
+    "angular-css": "^1.0.8",
+    "bootstrap": "^3.3.7",
+    "font-awesome": "^4.7.0",
+    "angular-messages": "^1.6.4",
+    "angular-material": "^1.1.4"
+  }
+}

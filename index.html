@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+  <head>
+    <meta charset="utf-8">
+		<!-- font awsome -->
+		<link rel="stylesheet" href="./bower_components/font-awesome/css/font-awesome.min.css">
+		<!-- Bootstrap -->
+		<link rel="stylesheet" href="./bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <!-- Css -->
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Federacion Costarricense Taekwondo</title>
+  </head>
+  <body>
+    <div ui-view>
+      <!-- Dependencias Generales -->
+			<script src="./bower_components/jquery/dist/jquery.min.js"></script>
+			<script src="./bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+      <!-- AngularJS -->
+			<script src="./bower_components/angular/angular.min.js"></script>
+      <!-- Dependencias de AngularJs -->
+				<script src="./bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+				<script src="./bower_components/oclazyload/dist/ocLazyLoad.min.js"></script>
+				<script src="./bower_components/angular-messages/angular-messages.min.js"></script>
+				<script src="./bower_components/angular-css/angular-css.js"></script>
+				<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-local-storage/0.5.2/angular-local-storage.min.js"></script>
+        <!-- Scripts de la aplicacion -->
+  			<script src="./app.js"></script>
+  			<script src="./route.js"></script>
+        <!-- Servicios -->
+        <script src="./components/services/instructor.service.js"></script>
+        <script src="./components/services/landing.service.js"></script>
+        <script src="./components/services/admin.service.js"></script>
+        <script src="./components/services/image.service.js"></script>
+        <script src="./components/services/login.service.js"></script>
+    </div>
+  </body>
+</html>

@@ -3,7 +3,7 @@
 
     angular
         .module('myApp')
-        .controller('loginService', loginService);
+        .factory('loginService', loginService);
 
     loginService.$inject = ['$http'];
     function loginService($http) {
@@ -12,9 +12,7 @@
         service.GetAll = GetAll;
         service.GetById = GetById;
         service.GetByUsername = GetByUsername;
-        service.Create = Create;
         service.Update = Update;
-        service.Delete = Delete;
 
         return service;
 

@@ -2,11 +2,11 @@
     'use strict';
 
     angular
-        .module('app')
-        .factory('UserService', UserService);
+        .module('myApp')
+        .factory('userService', userService);
 
-    UserService.$inject = ['$timeout', '$filter', '$q'];
-    function UserService($timeout, $filter, $q) {
+    userService.$inject = ['$timeout', '$filter', '$q'];
+    function userService($timeout, $filter, $q) {
 
         var service = {};
 
@@ -57,6 +57,11 @@
                             var lastUser = users[users.length - 1] || { id: 0 };
                             user.id = lastUser.id + 1;
 
+                              var Admin = {
+                                  id: 0,
+                                  username: 'admin', //user
+                                  password: '123456' //pass
+                                }
                             // save to local storage
                             users.push(user);
                             setUsers(users);

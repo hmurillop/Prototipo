@@ -5,8 +5,8 @@
         .module('myApp')
         .factory('AuthenticationService', AuthenticationService);
 
-    AuthenticationService.$inject = ['$http', '$cookies', '$rootScope', '$timeout', 'loginService'];
-    function AuthenticationService($http, $cookies, $rootScope, $timeout, loginService) {
+    AuthenticationService.$inject = ['$http', '$cookies', '$rootScope', '$timeout', 'loginService','userService'];
+    function AuthenticationService($http, $cookies, $rootScope, $timeout, loginService, userService) {
         var service = {};
 
         service.Login = Login;
@@ -21,7 +21,7 @@
              ----------------------------------------------*/
             $timeout(function () {
                 var response;
-                UserService.GetByUsername(username)
+                userService.GetByUsername(username)
                     .then(function (user) {
                         if (user !== null && user.password === password) {
                             response = { success: true };

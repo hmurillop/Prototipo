@@ -3,10 +3,10 @@
 
     angular
         .module('app')
-        .factory('AuthService', AuthService);
+        .factory('AuthenticationService', AuthenticationService);
 
-    AuthService.$inject = ['$http', '$cookies', '$rootScope', '$timeout', 'loginService'];
-    function AuthService($http, $cookies, $rootScope, $timeout, loginService) {
+    AuthenticationService.$inject = ['$http', '$cookies', '$rootScope', '$timeout', 'loginService'];
+    function AuthenticationService($http, $cookies, $rootScope, $timeout, loginService) {
         var service = {};
 
         service.Login = Login;

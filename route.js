@@ -1,7 +1,7 @@
 (function(){
   'use strict';
   angular
-  .module('appRoutes', ['ui.router', 'oc.lazyLoad', 'ngMessages','angularCSS'])
+  .module('appRoutes', ['ui.router', 'oc.lazyLoad', 'ngMessages','angularCSS','ngCookies'])
   .config(configuration);
 
   configuration.$inject = ['$stateProvider','$urlRouterProvider'];
@@ -71,7 +71,7 @@
          $http.defaults.headers.common['Authorization'] = 'Basic ' + $rootScope.globals.currentUser.authdata;
      }
 
-     
+
  }
 
 })();

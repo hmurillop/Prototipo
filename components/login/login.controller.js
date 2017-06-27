@@ -1,18 +1,20 @@
 (function () {
-  'use strict';
-  angular
-  .module('app')
-  .controller('LoginController', LoginController);
+    'use strict';
 
-  LoginController.$inject = ['$location', 'AuthenticationService', 'FlashService'];
-  function LoginController($location, AuthenticationService, FlashService) {
-      var vm = this;
+    angular
+        .module('myApp')
+        .controller('loginController', loginController);
 
-      vm.login = login;
+    loginController.$inject = ['$location', 'AuthService', 'FlashService'];
+    function loginController($location, AuthService, FlashService) {
+        var vm = this;
 
-      (function initController() {  // reseto del login
-          AuthenticationService.ClearCredentials();
-      })();
+        vm.login = login;
+
+        (function initController() {
+            // Reseteo de login
+            AuthenticationService.ClearCredentials();
+        })();
 
         function login() {
             vm.dataLoading = true;

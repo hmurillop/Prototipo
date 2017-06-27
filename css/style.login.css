@@ -1,0 +1,24 @@
+#login{
+  text-align: left;
+  padding-left: 55%;
+  padding-top: 150px;
+  color: #fff;
+}
+.loginImage{
+  background-image: url("../img/chica.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 800px;
+}
+h2{
+  color: #bf0000;
+}
+a{
+  color: #fff;
+  text-decoration: none;
+}
+#btnLogin{
+  background: #bf0000;
+  color: #fff;
+  border: 0px;
+}

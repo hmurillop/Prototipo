@@ -50,7 +50,7 @@
     .state('login',{
       url: '/login',
       templateUrl: 'components/login/login.view.html',
-      css: './css/style.administrator.css',
+      css: './css/style.login.css',
       resolve: {
        load: ['$ocLazyLoad', function($ocLazyLoad){
         return $ocLazyLoad.load('./components/login/login.controller.js')

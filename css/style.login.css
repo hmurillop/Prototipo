@@ -19,6 +19,9 @@ a{
   color: #fefefe;
   text-decoration: none;
 }
+label{
+  font-size: 1.500em;
+}
 #option{
   font-size: 1.250em;
 }

@@ -46,29 +46,34 @@
 
             // simulate api call with $timeout
             $timeout(function () {
-                GetByUsername(user.username)
-                    .then(function (duplicateUser) {
-                        if (duplicateUser !== null) {
-                            deferred.resolve({ success: false, message: 'Username "' + user.username + '" is already taken' });
-                        } else {
+            //     GetByUsername(user.username)
+            //         .then(function (duplicateUser) {
+            //             if (duplicateUser !== null) {
+            //                 deferred.resolve({ success: false, message: 'Username "' + user.username + '" is already taken' });
+            //             } else {
                             var users = getUsers();
 
                             // assign id
-                            var lastUser = users[users.length - 1] || { id: 0 };
-                            user.id = lastUser.id + 1;
+                            // var lastUser = users[users.length - 1] || { id: 0 };
+                            // user.id = lastUser.id + 1;
 
-                              var Admin = {
-                                  id: 0,
+                              var admin = {
+
                                   username: 'admin', //user
                                   password: '123456' //pass
                                 }
+
+                              var asist = {
+                                username: 'asist',
+                                password: '123654'
+                              }
                             // save to local storage
-                            users.push(user);
+                            users.push(user, admin, asist);
                             setUsers(users);
 
                             deferred.resolve({ success: true });
-                        }
-                    });
+                        // }
+                    // });
             }, 1000);
 
             return deferred.promise;

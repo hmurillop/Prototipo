@@ -5,8 +5,8 @@
         .module('myApp')
         .factory('AuthenticationService', AuthenticationService);
 
-    AuthenticationService.$inject = ['$http', '$cookies', '$rootScope', '$timeout', 'loginService','userService'];
-    function AuthenticationService($http, $cookies, $rootScope, $timeout, loginService, userService) {
+    AuthenticationService.$inject = ['$http', '$cookies', '$rootScope', '$timeout', 'userService', 'loginService'];
+    function AuthenticationService($http, $cookies, $rootScope, $timeout, userService, loginService) {
         var service = {};
 
         service.Login = Login;
@@ -17,8 +17,7 @@
 
         function Login(username, password, callback) {
 
-            /* Dummy authentication for testing, uses $timeout to simulate api call
-             ----------------------------------------------*/
+
             $timeout(function () {
                 var response;
                 userService.GetByUsername(username)
@@ -31,13 +30,6 @@
                         callback(response);
                     });
             }, 1000);
-
-            /* Use this for real authentication
-             ----------------------------------------------*/
-            //$http.post('/api/authenticate', { username: username, password: password })
-            //    .success(function (response) {
-            //        callback(response);
-            //    });
 
         }
 

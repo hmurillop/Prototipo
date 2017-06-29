@@ -12,7 +12,7 @@
       //Guardar nueva academia -Kaleen Li
       vm.save = function(pNewAcademy){
       	academyService.setAcademy(pNewAcademy);
-      	vm.acad = {};
+      	vm.academy = {};
       	reset();
       	init();
       }
@@ -27,7 +27,7 @@
         vm.academy.amountStudents = pAcademy.amountStudents;
       }
       //Editar academia, pasa el objeto al  academy service
-      vm.editAcademy = function(){
+      vm.modifyAcademy = function(){
         var editedAcademy = {
           name: vm.academy.name,
           adress: vm.academy.adress,
@@ -41,7 +41,7 @@
         init();
         reset();
       }
-      //Clears objAcademy
+      //Clears the form
       function reset(){
         vm.academy = {};
       }

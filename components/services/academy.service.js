@@ -1,9 +1,9 @@
 (function(){
   angular
   .module('myApp')
-  .service('adminService', adminService);
+  .service('academyService', academyService);
   //Información de las academias
-  function adminService(){
+  function academyService(){
     var academy = [];
     var publicAPI = {
       setAcademy : _setAcademy,
@@ -13,10 +13,10 @@
     return publicAPI; // todas las funciones que sean llamadas por ajax deben estar debajo del return, para que cuando angular corra el script haga el return y devuelva el api , las funciones debajo del return son privadas y se devuelve el api que es el que contiene las funciones
 
     //Ingresa información a la lista de academias -Kaleen Li
-    function _setAcademy(pName){
+    function _setAcademy(pobjAcademy){
       var academyList = _getAcademy();
 
-      academyList.push(pName);
+      academyList.push(pobjAcademy);
       localStorage.setItem('lsAcademyList', JSON.stringify(academyList));
     }
     //Obtiene información de la lista de academias -Kaleen Li

@@ -2,7 +2,8 @@
   'use strict';
   angular
   .module('appRoutes', ['ui.router', 'oc.lazyLoad', 'ngMessages','angularCSS','ngCookies'])
-  .config(configuration);
+  .config(configuration)
+  .controller('tabCtrl', tabCtrl);
 
   configuration.$inject = ['$stateProvider','$urlRouterProvider'];
 
@@ -79,4 +80,31 @@
                 }
               });
        }
+
+       function tabCtrl($scope, $location, $log) {
+        $scope.selectedIndex = 0;
+
+        $scope.$watch('selectedIndex', function(current, old) {
+            switch (current) {
+                case 0:
+                    $location.url("/");
+                    break;
+                case 1:
+                    $location.url("/");
+                    break;
+                case 2:
+                    $location.url("/");
+                    break;
+                case 3:
+                    $location.url("/");
+                    break;
+                case 4:
+                    $location.url("/");
+                    break;
+                case 5:
+                    $location.url("/");
+                    break;
+            }
+        });
+    }
 })();

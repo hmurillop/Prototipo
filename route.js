@@ -60,6 +60,45 @@
       controllerAs: 'vm'
     })
 
+    .state('event',{
+      url: '/event',
+      templateUrl: 'components/administrator/event.view.html',
+      css: './css/style.event.css',
+      resolve: {
+       load: ['$ocLazyLoad', function($ocLazyLoad){
+        return $ocLazyLoad.load('./components/administrator/event.controller.js')
+       }]
+      },
+      controller: 'eventController',
+      controllerAs: 'vm'
+    })
+
+    .state('eventTorneo',{
+      url: '/eventTorneo',
+      templateUrl: 'components/administrator/eventTorneo.view.html',
+      css: './css/style.event.css',
+      resolve: {
+       load: ['$ocLazyLoad', function($ocLazyLoad){
+        return $ocLazyLoad.load('./components/administrator/eventTorneo.controller.js')
+       }]
+      },
+      controller: 'eventTorneoController',
+      controllerAs: 'vm'
+    })
+
+    .state('eventFogueo',{
+      url: '/eventFogueo',
+      templateUrl: 'components/administrator/eventFogueo.view.html',
+      css: './css/style.event.css',
+      resolve: {
+       load: ['$ocLazyLoad', function($ocLazyLoad){
+        return $ocLazyLoad.load('./components/administrator/eventFogueo.controller.js')
+       }]
+      },
+      controller: 'eventFogueoController',
+      controllerAs: 'vm'
+    })
+
     $urlRouterProvider.otherwise('/landing');
   }
 })();

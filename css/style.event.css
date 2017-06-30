@@ -1,0 +1,40 @@
+h2{
+	font-size: 1.500em;
+	text-align: left;
+}
+hr{
+	color: #fff;
+	padding-top: 20px;
+}
+body{
+  font-size: 16px;
+}
+/*Estilos del form*/
+body form label{
+	text-align: left;
+  font-size: 0.875em;
+  margin-bottom: 0.5%;
+}
+body form input{
+	outline: none;
+  border: 0px;
+  border-bottom: 2px solid #9a9a9a;
+}
+body form select{
+	border-top: 2px;
+	border-left: 2px;
+	border-right: 2px;
+  border-color: #9a9a9a;
+  margin-bottom: 10px;
+  background-color: #fff;
+}
+/*Fin Estilos del form*/
+input.ng-invalid.ng-touched {
+  border-bottom: 2px solid #e74c3c;
+}
+input.ng-valid.ng-touched {
+  border-bottom: 2px solid #2ecc71;
+}
+input.ng-invalid.ng-touched.ng-empty{
+  border-bottom: 2px solid #3498db;
+}

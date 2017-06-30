@@ -3,8 +3,11 @@
   angular
     .module('myApp')
     .controller('adminController', adminController);
-    function adminController(adminService){
- 
+
+    adminController.$inject = ['adminService', 'userService'];
+    function adminController(adminService, userService){
+
+
       var vm = this;
 
       function init(){

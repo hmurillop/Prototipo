@@ -2,12 +2,16 @@
 <html ng-app="myApp">
   <head>
     <meta charset="utf-8">
+
+    <!-- Material -->
+    <link rel="stylesheet" href="./bower_components/angular-material/angular-material.css">
 		<!-- font awsome -->
 		<link rel="stylesheet" href="./bower_components/font-awesome/css/font-awesome.min.css">
 		<!-- Bootstrap -->
 		<link rel="stylesheet" href="./bower_components/bootstrap/dist/css/bootstrap.min.css">
     <!-- Css -->
     <link rel="stylesheet" href="./css/style.css">
+
     <title>Federacion Costarricense Taekwondo</title>
   </head>
   <body>
@@ -18,13 +22,18 @@
       <script src="./bower_components/angular/angular.min.js"></script>
       <!-- Dependencias Generales -->
 			<script src="./bower_components/jquery/dist/jquery.min.js"></script>
+      <!-- bootstrap -->
 			<script src="./bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 
-      <!-- Dependencias de AngularJs -->
+        <!-- Dependencias de AngularJs -->
 				<script src="./bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
 				<script src="./bower_components/oclazyload/dist/ocLazyLoad.min.js"></script>
 				<script src="./bower_components/angular-messages/angular-messages.min.js"></script>
 				<script src="./bower_components/angular-css/angular-css.js"></script>
+        <script src="./bower_components/angular-cookies/angular-cookies.js"></script>
+        <script src="./bower_components/angular-aria/angular-aria.js"></script>
+	      <script src="./bower_components/angular-animate/angular-animate.js"></script>
+	      <script src="./bower_components/angular-material/angular-material.js"></script>
 				<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-local-storage/0.5.2/angular-local-storage.min.js"></script>
         <!-- Scripts de la aplicacion -->
   			<script src="./app.js"></script>
@@ -36,6 +45,9 @@
         <script src="./components/services/admin.service.js"></script>
         <script src="./components/services/image.service.js"></script>
         <script src="./components/services/login.service.js"></script>
+        <script src="./components/services/authentication.service.js"></script>
+        <script src="./components/services/login.service.local-storage.js"></script>
+        <script src="./components/services/flash.service.js"></script>
         <script src="./components/services/eventTorneo.service.js"></script>
         <script src="./components/services/eventFogueo.service.js"></script>
         <script src="./components/services/academy.service.js"></script>

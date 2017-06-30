@@ -29,6 +29,14 @@ body form select{
   background-color: #fff;
 }
 /*Fin Estilos del form*/
+div.ng-active {
+  text-align: left;
+  padding-left: 2%;
+  color: #f06d50;
+  margin: 0 0 20px 0;
+  font-size: 0.9em;
+  letter-spacing: 1px;
+}
 input.ng-invalid.ng-touched {
   border-bottom: 2px solid #e74c3c;
 }

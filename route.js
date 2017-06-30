@@ -73,16 +73,6 @@
       controller: 'academyController',
       controllerAs: 'vm'
     })
-
-
-
-
-
-
-
-
-
-
     $urlRouterProvider.otherwise('/landing');
   }
 

@@ -3,6 +3,7 @@
   angular
     .module('myApp')
     .controller('academyController', academyController);
+    academyController.$inject=['academyService'];
     function academyController(academyService){
       var vm = this;
       function init(){
@@ -13,7 +14,7 @@
       vm.save = function(pNewAcademy){
       	academyService.setAcademy(pNewAcademy);
       	vm.academy = {};
-      	reset();
+      	clear();
       	init();
       }
       //Obtiene información de academias del form -Kaleen Li
@@ -26,7 +27,7 @@
         vm.academy.amountTeachers = pAcademy.amountTeachers;
         vm.academy.amountStudents = pAcademy.amountStudents;
       }
-      //Editar academia, pasa el objeto al  academy service
+      //Modificar academia, pasa el objeto al  academy service
       vm.modifyAcademy = function(){
         var editedAcademy = {
           name: vm.academy.name,
@@ -38,11 +39,11 @@
           amountStudents: vm.academy.amountStudents
         }
         academyService.updateAcademy(editedAcademy); //Se le pasa como parámetro al service
+        clear(); //Importante el orden
         init();
-        reset();
       }
       //Clears the form
-      function reset(){
+      function clear(){
         vm.academy = {};
       }
     }

@@ -1,51 +1,51 @@
 <section>
 <!-- CU-47 Registrar academias -Kaleen Li -->
-	<form name="frmRegAcademy" ng-submit="vm.save(vm.academy)" novalidate autocomplete="off">
-		<label>Nombre de la academia:</label>
-		<input type="text" ng-model="vm.academy.name" name="academyName" required>
-		<div ng-messages="frmRegAcademy.name.$error">
-			<div ng-messages-includes="components/includes/messages.html"></div>
-		</div>
 
-		<label>Dirección:</label>
-		<input type="text" ng-model="vm.academy.adress" name="academyAdress" required>
-		<div ng-messages="frmRegAcademy.adress.$error">
-			<div ng-messages-includes="components/includes/messages.html"></div>
-		</div>
+	<div class="col-ms-12 col-md-12 col-lg-12 form-group">
+		<form name="frmRegAcademy" ng-submit="vm.save(vm.academy)" autocomplete="off">
+			<h2>Registrar academias</h2>
+			<div class="col-ms-4 col-md-4 col-lg-4">
+				<div class="col-ms-6 col-md-8 col-lg-8">
+					<label>Nombre de la academia:</label>
+					<input class="form-control" type="text" ng-model="vm.academy.name" name="academyName" required>
+				</div>
+				<div class="col-ms-6 col-md-8 col-lg-8">
+					<label>Dirección:</label>
+					<input class="form-control" type="text" ng-model="vm.academy.adress" name="academyAdress" required>
+				</div>
+				<div class="col-ms-6 col-md-8 col-lg-8">
+					<label>Teléfono:</label>
+					<input class="form-control" type="text" ng-model="vm.academy.phone" name="academyPhone" required>
+				</div>
+				<div class="col-ms-6 col-md-8 col-lg-8">
+					<label>Encargado:</label> <!-- Solo debe haber un único encargado.-->
+					<input class="form-control" type="text" ng-model="vm.academy.manager" name="academyManager" placeholder="Nombre completo" ng-minlength="1" ng-maxlength="1" required>
+				</div>
+			</div>
+			<div class="col-ms-4 col-md-4 col-lg-4">
+				<div class="col-ms-6 col-md-8 col-lg-8">
+					<label>Ubicación:</label> <!-- Google API ubicación Latitud y Longitud -->
+					<input class="form-control" type="text" ng-model="vm.academy.ubication" name="ubication" required>
+				</div>
+				<div class="col-ms-6 col-md-8 col-lg-8">
+					<label>Cantidad de profesores:</label> <!-- Mínimo debe haber un profesor. Depende del registro de profesores -->
+					<input class="form-control" type="number" ng-model="vm.academy.amountTeachers" name="amountTeachers" ng-minlegth="1" required>
+				</div>
+				<div class="col-ms-6 col-md-8 col-lg-8">
+					<label>Cantidad de alumnos:</label> <!-- Depende del registro de alumnos -->
+					<input class="form-control" type="number" ng-model="vm.academy.amountStudents" name="amountStudents" ng-minlegth="1" required>
+				</div>
+				<div class="col-ms-6 col-md-8 col-lg-8">
+					<button class="btn btn-primary" type="submit" ng-click="vm.reset()" ng-disable="frmRegAcademy.$invalid">Registrar</button>
+					<input class="btn" type="button" value="Actualizar" ng-click="vm.modifyAcademy(academy)">
+				</div>
+			</div>
+		</form>
+	</div>
 
-		<label>Teléfono:</label>
-		<input type="text" ng-model="vm.academy.phone" name="academyPhone" required>
-		<div ng-messages="frmRegAcademy.phone.$error">
-			<div ng-messages-includes="components/includes/messages.html"></div>
-		</div>
-
-		<label>Encargado:</label> <!-- Solo debe haber un único encargado.-->
-		<input type="text" ng-model="vm.academy.manager" name="academyManager" placeholder="Nombre completo" ng-minlength="1" ng-maxlength="1" required>
-		<div ng-messages="frmRegAcademy.manager.$error">
-			<div ng-messages-includes="components/includes/messages.html"></div>
-		</div>
-
-		<label>Ubicación:</label> <!-- Google API ubicación Latitud y Longitud -->
-		<input type="text" ng-model="vm.academy.map" name="academyMap">
-
-		<label>Cantidad de profesores:</label> <!-- Mínimo debe haber un profesor. Depende del registro de profesores -->
-		<input type="number" ng-model="vm.academy.amountTeachers" name="amountTeachers" ng-minlegth="1" required>
-		<div ng-messages="frmRegAcademy.amountTeachers.$error">
-			<div ng-messages-includes="components/includes/messages.html"></div>
-		</div>
-
-		<label>Cantidad de alumnos:</label> <!-- Depende del registro de alumnos -->
-		<input type="number" ng-model="vm.academy.amountStudents" name="amountStudents" ng-minlegth="1" required>
-		<div ng-messages="frmRegAcademy.amountStudents.$error">
-			<div ng-messages-includes="components/includes/messages.html"></div>
-		</div>
-
-		<button type="submit" ng-click="vm.save()" ng-disable="frmRegAcademy.$invalid">Registrar</button>
-		<input type="button" value="Actualizar" ng-click="vm.editAcademy(academy)">
-	</form>
 
 <!-- CU-46 Visualizar academias -Kaleen Li -->
-	<table>
+	<table class="table table-hover">
 		<thead>
 			<tr>
 				<th>Academia</th>
@@ -55,6 +55,7 @@
 				<th>Ubicación</th>
 				<th>Cantidad de profesores</th>
 				<th>Catidad de alumnos</th>
+				<th> </th>
 			</tr>
 		</thead>
 		<tbody>
@@ -67,7 +68,7 @@
 				<td>{{academy.amountTeachers}}</td>
 				<td>{{academy.amountStudents}}</td>
 				<!-- CU-48 Modificar academias -Kaleen Li -->
-				<td><input type="button" value="Modificar" ng-click="vm.modifyAcademy(academy)"></td>
+				<td><input class="btn" type="button" value="Modificar" ng-click="vm.getInfo(academy)"></td>
 			</tr>
 		</tbody>
 	</table>

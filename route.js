@@ -60,6 +60,7 @@
       controllerAs: 'vm'
     })
 
+
     .state('event',{
       url: '/event',
       templateUrl: 'components/administrator/event.view.html',
@@ -96,6 +97,19 @@
        }]
       },
       controller: 'eventFogueoController',
+      controllerAs: 'vm'
+    })
+
+    .state('academy',{
+      url: '/academy',
+      templateUrl: 'components/administrator/academy.view.html',
+      css: './css/style.academy.css',
+      resolve: {
+       load: ['$ocLazyLoad', function($ocLazyLoad){
+        return $ocLazyLoad.load('./components/administrator/academy.controller.js')
+       }]
+      },
+      controller: 'academyController',
       controllerAs: 'vm'
     })
 

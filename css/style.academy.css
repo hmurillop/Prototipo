@@ -1,0 +1,28 @@
+body{
+  font-size: 16px;
+  font-family: Futura, Roboto, Open Sans;
+}
+/*Estilos del form*/
+body form h2{
+  font-size: 1.5em;
+  color: #000;
+  margin-bottom: 2.3%;
+  margin-right: 80%;
+}
+body form label{
+  font-size: 0.875em;
+  margin-bottom: 0.5%;
+}
+
+body form input{
+  margin-bottom: 4%;
+}
+body form input button{
+  margin-top: 6%;
+}
+
+/*Estilos del table*/
+body table thead{
+  background: #4b74c0;
+  color: #fff;
+}

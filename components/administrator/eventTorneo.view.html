@@ -1,0 +1,214 @@
+<h2>Registrar eventos torneo</h2>
+
+<div class="row">
+
+<hr>
+
+  <form name="frmEvenTorneo" ng-submit="vm.save(vm.eventTorneo)" novalidate autocomplete="off">
+
+    <div class="col-md-6">
+
+      <!-- input -->
+      <div class="col-md-12">
+        <label class="col-md-4">Nombre</label>
+        <input class="col-md-4 col-offset-2" type="text" ng-model="vm.eventTorneo.name" name="name" required>
+      </div>
+
+      <!-- input -->
+      <div class="col-md-12">
+        <label class="col-md-4">Teléfono</label>
+        <input class="col-md-4 col-offset-2" type="text" ng-model="vm.eventTorneo.phone" name="phone" required>
+      </div>
+
+      <!-- input -->
+      <div class="col-md-12">
+        <label class="col-md-4">Estado del evento</label>
+        <input class="col-md-4 col-offset-2" type="text" ng-model="vm.eventTorneo.stateEvent" name="stateEvent" required>
+      </div>
+
+      <!-- input -->
+      <div class="col-md-12">
+        <label class="col-md-4">Fecha de inicio</label>
+        <input class="col-md-4 col-offset-2" type="date" ng-model="vm.eventTorneo.startDate" name="startDate" required>
+      </div>
+
+      <!-- input -->
+      <div class="col-md-12">
+        <label class="col-md-4">Fecha de finalizado</label>
+        <input class="col-md-4 col-offset-2" type="date" ng-model="vm.eventTorneo.endDate" name="endDate" required>
+      </div>
+
+      <!-- input -->
+      <div class="col-md-12">
+        <label class="col-md-4">Categoría</label>
+        <!-- <select class="" ng-model="vm.eventTorneo.category" name="category" required>
+          <option value="">---Indique la categoría---</option>
+          <option value="gender">Género</option>
+          <option value="age">Edad</option>
+          <option value="weight">Peso</option>
+        </select> -->
+      </div>
+
+      <!-- input -->
+      <div class="col-md-12">
+        <label class="col-md-4">Género</label>
+        <select class="col-md-4 col-offset-2" ng-model="vm.eventTorneo.gender" name="gender" required>
+          <option value="">---Indique la género---</option>
+          <option value="male">Masculino</option>
+          <option value="female">Femenino</option>
+          <option value="undefined">Indefinido</option>
+          </select>
+      </div>
+
+      <!-- input -->
+      <div class="col-md-12">
+        <label class="col-md-4">Edad</label>
+        <select class="col-md-4 col-offset-2" ng-model="vm.eventTorneo.age" name="age" required>
+          <option value="">---Indique la edad---</option>
+          <option value="junior">Infantil o Junior (4-11 años)</option>
+          <option value="cadet">Cadete (12-16 años)</option>
+          <option value="elite">Élite (17-23 años)</option>
+          <option value="senior">Senior (23 años o más)</option>
+        </select>
+      </div>
+
+      <!-- input -->
+      <div class="col-md-12">
+        <label class="col-md-4">Peso</label>
+        <select class="col-md-4 col-offset-2" ng-model="vm.eventTorneo.weight" name="weight" required>
+          <option value="">---Indique el peso---</option>
+          <option value="ilYang">il-Yang(pluma, 51kg)</option>
+          <option value="iYang">i-Yang (gallo, 52 kg a 59 kg)</option>
+          <option value="superGallo">o-Yang (Supergallo, 60 kg a 65 kg)</option>
+          <option value="seniorSam">sam-Yang (Wélter, 66 kg a 74 kg)</option>
+          <option value="seniorSiu">siu-Yang (Wélter, 74 kg)</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+
+      <!-- input -->
+      <div class="col-md-12">
+        <label class="col-md-4">Organizaciones beneficas</label>
+        <input class="col-md-4 col-offset-2" type="text" ng-model="vm.eventTorneo.charities" name="charities">
+      </div>
+
+      <!-- input -->
+      <div class="col-md-12">
+        <label class="col-md-4">Capacidad</label>
+        <input class="col-md-4 col-offset-2" type="text" ng-model="vm.eventTorneo.capacity" name="capacity" required>
+      </div>
+
+      <!-- input -->
+      <div class="col-md-12">
+        <label class="col-md-4">Horario</label>
+        <input class="col-md-4 col-offset-2" type="text" ng-model="vm.eventTorneo.schedule" name="schedule" required>
+      </div>
+
+      <!-- input -->
+      <div class="col-md-12">
+        <label class="col-md-4">Costo de inscripción</label>
+        <input class="col-md-4 col-offset-2" type="text" ng-model="vm.eventTorneo.costRegistration" name="costRegistration" required>
+      </div>
+
+      <!-- input -->
+      <div class="col-md-12">
+        <label class="col-md-4">Lugar</label>
+        <input class="col-md-4 col-offset-2" type="text" ng-model="vm.eventTorneo.place" name="place" required>
+      </div>
+
+      <!-- input -->
+      <div class="col-md-12">
+        <label class="col-md-4">Ubicación</label>
+        <input class="col-md-4 col-offset-2" type="type" ng-model="vm.eventTorneo.location" name="location" required>
+      </div>
+
+      <!-- input -->
+      <div class="col-md-12">
+        <label class="col-md-4">Patrocinador</label>
+          <!-- <select class="" ng-model="vm.eventTorneo.sponsor" name="sponsor" required>
+            <option value="">---Indique patrocinador---</option>
+            <option value="yes">Sí</option>
+            <option value="no">No</option>
+          </select> -->
+      </div>
+
+      <!-- input -->
+      <div class="col-md-12">
+        <label class="col-md-4">Marca</label>
+        <input class="col-md-4 col-offset-2" type="type" ng-model="vm.eventTorneo.brand" name="brand" required>
+      </div>
+
+      <!-- input -->
+      <div class="col-md-12">
+        <label class="col-md-4">Empresa</label>
+        <input class="col-md-4 col-offset-2" type="type" ng-model="vm.eventTorneo.business" name="business" required>
+      </div>
+
+      <!-- input -->
+      <div class="col-md-12">
+        <label class="col-md-4">Tipo de patrocinador</label>
+        <input class="col-md-4 col-offset-2" type="type" ng-model="vm.eventTorneo.typeSponsor" name="typeSponsor" required>
+      </div>
+
+      <!-- input -->
+      <div class="col-md-12">
+        <label class="col-md-4">Seleccione un archivo (Logo)</label>
+        <input class="col-md-4 col-offset-2" type="type" ng-model="vm.eventTorneo.selectFile" name="selectFile" required>
+      </div>
+
+    </div>
+
+    <button type="submit" ng-click="vm.reset()" ng-disabled="frmEvenTorneo.$invalid">Registrar</button>
+    <input  type="button" value="Actualizar" ng-click="vm.update(eventTorneo)">
+
+  </form>
+
+</div>
+
+<table id="tblEventTorneo">
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Teléfono</th>
+      <th>Estado del evento</th>
+      <th>Fecha de inicio</th>
+      <th>Fecha de finalizado</th>
+      <!-- <th>Categoría</th> -->
+      <th>Género</th>
+      <th>Edad</th>
+      <th>Peso</th>
+      <th>Organizaciones beneficas</th>
+      <th>Capacidad</th>
+      <th>Horario</th>
+      <th>Costo inscripción</th>
+      <th>Lugar</th>
+      <th>Ubicación</th>
+      <th>Nombre del patrocinador</th>
+      <th>Logo</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="eventTorneo in vm.eventsTorneo">
+      <td>{{eventTorneo.name}}</td>
+      <td>{{eventTorneo.phone}}</td>
+      <td>{{eventTorneo.stateEvent}}</td>
+      <td>{{eventTorneo.startDate | date}}</td>
+      <td>{{eventTorneo.endDate | date}}</td>
+      <!-- <td>{{eventTorneo.category}}</td> -->
+      <td>{{eventTorneo.gender}}</td>
+      <td>{{eventTorneo.age}}</td>
+      <td>{{eventTorneo.weight}}</td>
+      <td>{{eventTorneo.charities}}</td>
+      <td>{{eventTorneo.capacity}}</td>
+      <td>{{eventTorneo.schedule}}</td>
+      <td>{{eventTorneo.costRegistration}}</td>
+      <td>{{eventTorneo.place}}</td>
+      <td>{{eventTorneo.location}}</td>
+      <td>{{eventTorneo.brand}}</td>
+      <td>{{eventTorneo.selectFile}}</td>
+      <td><input type="button" value="Editar" ng-click="vm.getInfo(eventTorneo)"></td>
+    </tr>
+  </tbody>
+</table>

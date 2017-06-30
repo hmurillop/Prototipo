@@ -1,0 +1,215 @@
+<h2>Registrar eventos fogueo</h2>
+
+<hr>
+
+<div class="row">
+
+  <form name="frmEventFogueo" ng-submit="vm.save(vm.eventFogueo)" novalidate autocomplete="off">
+
+    <div class="col-md-6">
+
+      <!-- input -->
+      <div class="col-md-12">
+        <label class="col-md-4">Nombre</label>
+        <input class="col-md-4 col-offset-2" type="text" ng-model="vm.eventFogueo.name" name="name" required>
+      </div>
+      <!-- input -->
+      <div class="col-md-12">
+        <label class="col-md-4">Teléfono</label>
+        <input class="col-md-4 col-offset-2" type="text" ng-model="vm.eventFogueo.phone" name="phone" required>
+      </div>
+
+      <!-- input -->
+      <div class="col-md-12">
+        <label class="col-md-4">Estado del evento</label>
+        <input class="col-md-4 col-offset-2" type="text" ng-model="vm.eventFogueo.stateEvent" name="stateEvent" required>
+      </div>
+
+      <!-- input -->
+      <div class="col-md-12">
+        <label class="col-md-4">Fecha de inicio</label>
+        <input class="col-md-4 col-offset-2" type="date" ng-model="vm.eventFogueo.startDate" name="startDate" required>
+      </div>
+
+      <!-- input -->
+      <div class="col-md-12">
+        <label class="col-md-4">Fecha de finalizado</label>
+        <input class="col-md-4 col-offset-2" type="date" ng-model="vm.eventFogueo .endDate" name="endDate" required>
+      </div>
+
+      <!-- input -->
+      <div class=col-md-12"">
+        <label class="col-md-4">Categorías</label>
+        <!-- <select class="" ng-model="vm.eventFogueo.category" name="category" required>
+          <option value="">---Indique la categoría---</option>
+          <option value="gender">Género</option>
+          <option value="age">Edad</option>
+          <option value="weight">Peso</option>
+        </select> -->
+      </div>
+
+      <!-- input -->
+      <div class="col-md-12">
+        <label class="col-md-4">Género</label>
+        <select class="col-md-4 col-offset-2" ng-model="vm.eventFogueo.gender" name="gender" required>
+          <option value="">---Indique la género---</option>
+          <option value="male">Masculino</option>
+          <option value="female">Femenino</option>
+          <option value="undefined">Indefinido</option>
+          </select>
+      </div>
+
+      <!-- input -->
+      <div class="col-md-12">
+        <label class="col-md-4">Edad</label>
+        <select class="col-md-4 col-offset-2" ng-model="vm.eventFogueo.age" name="age" required>
+          <option value="">---Indique la edad---</option>
+          <option value="junior">Infantil o Junior (4-11 años)</option>
+          <option value="cadet">Cadete (12-16 años)</option>
+          <option value="elite">Élite (17-23 años)</option>
+          <option value="senior">Senior (23 años o más)</option>
+        </select>
+      </div>
+
+      <!-- input -->
+      <div class="col-md-12">
+        <label class="col-md-4">Peso</label>
+        <select class="col-md-4 col-offset-2" ng-model="vm.eventFogueo.weight" name="weight" required>
+          <option value="">---Indique el peso---</option>
+          <option value="junior">il-Yang(pluma, 51kg)</option>
+          <option value="cadet">i-Yang (gallo, 52 kg a 59 kg)</option>
+          <option value="elite">o-Yang (Supergallo, 60 kg a 65 kg)</option>
+          <option value="seniorSan">sam-Yang (Wélter, 66 kg a 74 kg)</option>
+          <option value="seniorSiu">siu-Yang (Wélter, 74 kg)</option>
+        </select>
+      </div>
+
+      <!-- input -->
+      <div class="col-md-12">
+        <label class="col-md-4">Organizaciones beneficas</label>
+        <input class="col-md-4 col-offset-2" type="text" ng-model="vm.eventFogueo.charities" name="charities">
+      </div>
+
+    </div>
+
+    <div class="col-md-6">
+
+      <!-- input -->
+      <div class="col-md-12">
+        <label class="col-md-4">Capacidad</label>
+        <input class="col-md-4 col-offset-2" type="text" ng-model="vm.eventFogueo.capacity" name="capacity" required>
+      </div>
+
+      <!-- input -->
+      <div class="col-md-12">
+        <label class="col-md-4">Horario</label>
+        <input class="col-md-4 col-offset-2" type="text" ng-model="vm.eventFogueo.schedule" name="schedule" required>
+      </div>
+
+      <!-- input -->
+      <div class="col-md-12">
+        <label class="col-md-4">Costo de inscripción</label>
+        <input class="col-md-4 col-offset-2" type="text" ng-model="vm.eventFogueo.costRegistration" name="costRegistration" required>
+      </div>
+
+      <!-- input -->
+      <div class="col-md-12">
+        <label class="col-md-4">Lugar</label>
+        <input class="col-md-4 col-offset-2" type="text" ng-model="vm.eventFogueo.place" name="place" required>
+      </div>
+
+      <!-- input -->
+      <div class="col-md-12">
+        <label class="col-md-4">Ubicación</label>
+        <input class="col-md-4 col-offset-2" type="type" ng-model="vm.eventFogueo.location" name="location" required>
+      </div>
+
+      <!-- Mapa -->
+  	    <!-- <iframe style="border: 0;" src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d1965.0058695363427!2d-84.03107!3d9.932979860539223!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1suniversidad+cenfotec!5e0!3m2!1ses!2s!4v1396040769596" width="450" height="300" frameborder="0"></iframe> -->
+
+
+      <!-- input -->
+      <label class="col-md-4">Patrocinador</label>
+        <!-- <select class="" ng-model="vm.eventFogueo.sponsor" name="sponsor" required>
+          <option value="">---Indique patrocinador---</option>
+          <option value="yes">Sí</option>
+          <option value="no">No</option>
+        </select> -->
+
+      <!-- input -->
+      <div class="col-md-12">
+        <label class="col-md-4">Marca</label>
+        <input class="col-md-4 col-offset-2" type="type" ng-model="vm.eventFogueo.brand" name="brand" required>
+      </div>
+
+      <!-- input -->
+      <div class="col-md-12">
+        <label class="col-md-4">Empresa</label>
+        <input class="col-md-4 col-offset-2" type="type" ng-model="vm.eventFogueo.business" name="business" required>
+      </div>
+
+      <!-- input -->
+      <div class="col-md-12">
+        <label class="col-md-4">Tipo de patrocinador</label>
+        <input class="col-md-4 col-offset-2" type="type" ng-model="vm.eventFogueo.typeSponsor" name="typeSponsor" required>
+      </div>
+
+      <!-- input -->
+      <div class="col-md-12">
+        <label class="col-md-4">Seleccione un archivo (Logo)</label>
+        <input class="col-md-4 col-offset-2" type="type" ng-model="vm.eventFogueo.selectFile" name="selectFile" required>
+      </div>
+
+    </div>
+
+      <button type="submit" ng-click="vm.reset()" ng-disabled="frmEventFogueo.$invalid">Registrar</button>
+      <input  type="button" value="Actualizar" ng-click="vm.update(eventFogueo)">
+
+  </form>
+</div>
+
+<table id="tblEventFogueo">
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Teléfono</th>
+      <th>Estado del evento</th>
+      <th>Fecha de inicio</th>
+      <th>Fecha de finalizado</th>
+      <!-- <th>Categoría</th> -->
+      <th>Género</th>
+      <th>Edad</th>
+      <th>Peso</th>
+      <th>Organizaciones beneficas</th>
+      <th>Capacidad</th>
+      <th>Horario</th>
+      <th>Costo inscripción</th>
+      <th>Lugar</th>
+      <th>Ubicación</th>
+      <th>Nombre Patrocinador</th>
+      <th>Logo</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="eventFogueo in vm.eventsFogueo">
+      <td>{{eventFogueo.name}}</td>
+      <td>{{eventFogueo.phone}}</td>
+      <td>{{eventFogueo.stateEvent}}</td>
+      <td>{{eventFogueo.startDate | date}}</td>
+      <td>{{eventFogueo.endDate | date}}</td>
+      <!-- <td>{{eventFogueo.category}}</td> -->
+      <td>{{eventFogueo.gender}}</td>
+      <td>{{eventFogueo.age}}</td>
+      <td>{{eventFogueo.weight}}</td>
+      <td>{{eventFogueo.charities}}</td>
+      <td>{{eventFogueo.capacity}}</td>
+      <td>{{eventFogueo.schedule}}</td>
+      <td>{{eventFogueo.costRegistration}}</td>
+      <td>{{eventFogueo.place}}</td>
+      <td>{{eventFogueo.location}}</td>
+      <td>{{eventFogueo.brand}}</td>
+      <td>{{eventFogueo.selectFile}}</td>
+      <td><input type="button" value="Editar" ng-click="vm.getInfo(eventFogueo)"></td>
+    </tr>
+  </tbody>
+</table>

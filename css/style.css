@@ -2,3 +2,34 @@ body{
   text-align: center;
   max-width: 1500px;
 }
+
+/*styles fonts*/
+@font-face {
+	font-family: futura;
+	src:url(fonts/FuturaPTLight_1.otf);
+}
+@font-face {
+	font-family: robotoblack;
+	src:url(fonts/Roboto-Black.ttf);
+}
+@font-face {
+	font-family: robotobold;
+	src:url(fonts/Roboto-Bold.ttf);
+}
+@font-face {
+	font-family: robotolight;
+	src:url(fonts/Roboto-Light.ttf);
+}
+@font-face {
+	font-family: robotomedium;
+	src:url(fonts/Roboto-Medium.ttf);
+}
+@font-face {
+	font-family: robotoregular;
+	src:url(fonts/Roboto-Regular.ttf);
+}
+@font-face {
+	font-family: robotothin;
+	src:url(fonts/Roboto-Thin.ttf);
+}
+/*styles fonts*/

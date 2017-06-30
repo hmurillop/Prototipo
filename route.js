@@ -61,6 +61,28 @@
       controllerAs: 'vm'
     })
 
+    .state('academy',{
+      url: '/academy',
+      templateUrl: 'components/administrator/academy.view.html',
+      css: './css/style.academy.css',
+      resolve: {
+       load: ['$ocLazyLoad', function($ocLazyLoad){
+        return $ocLazyLoad.load('./components/administrator/academy.controller.js')
+       }]
+      },
+      controller: 'academyController',
+      controllerAs: 'vm'
+    })
+
+
+
+
+
+
+
+
+
+
     $urlRouterProvider.otherwise('/landing');
   }
 

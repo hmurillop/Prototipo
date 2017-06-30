@@ -1,7 +1,7 @@
 (function(){
   'use strict';
   angular
-  .module('appRoutes', ['ui.router', 'oc.lazyLoad', 'ngMessages','angularCSS','ngCookies'])
+  .module('appRoutes', ['ui.router', 'oc.lazyLoad','ngMessages','angularCSS','ngCookies'])
   .config(configuration)
   .controller('tabCtrl', tabCtrl);
 

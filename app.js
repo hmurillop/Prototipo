@@ -3,7 +3,7 @@
   .module('myApp',['appRoutes', 'ngMaterial'])
   .config(function($mdThemingProvider) {
   		$mdThemingProvider.theme('default')
-    		.primaryPalette('red')
-    		.accentPalette('blue');
+    		.primaryPalette('indigo')
+    		.accentPalette('blue-grey');
 	});
 })();

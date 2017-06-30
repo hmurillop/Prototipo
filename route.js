@@ -87,13 +87,13 @@
         $scope.$watch('selectedIndex', function(current, old) {
             switch (current) {
                 case 0:
-                    $location.url("/");
+                    $location.url("/academy");
                     break;
                 case 1:
-                    $location.url("/");
+                    $location.url("/event");
                     break;
                 case 2:
-                    $location.url("/");
+                    $location.url("/instructor");
                     break;
                 case 3:
                     $location.url("/");

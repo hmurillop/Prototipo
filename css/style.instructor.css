@@ -47,4 +47,9 @@ thead {
   width: calc( 100% - 1em )
 }
 
+
+label{
+  color: #000000;
+  font-family: robotothin;
+}
 /*estilos tabla registros*/

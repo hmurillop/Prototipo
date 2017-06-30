@@ -93,7 +93,7 @@
                     $location.url("/event");
                     break;
                 case 2:
-                    $location.url("/instructor");
+                    $location.url("#/instructor");
                     break;
                 case 3:
                     $location.url("/");

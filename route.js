@@ -116,22 +116,22 @@
     $urlRouterProvider.otherwise('/landing');
   }
 
-  run.$inject = ['$rootScope', '$location', '$cookies', '$http'];
- function run($rootScope, $location, $cookies, $http) {
-     // El usuario continuo logeado aun despues de refrescar la pagina
-     $rootScope.globals = $cookies.getObject('globals') || {};
-     if ($rootScope.globals.currentUser) {
-         $http.defaults.headers.common['Authorization'] = 'Basic ' + $rootScope.globals.currentUser.authdata;
-     }
-     $rootScope.$on('$locationChangeStart', function (event, next, current) {
-            // devuelve al login si entra a uno zona restrica, si no se encuentra logueado
-            var restrictedPage = $.inArray($location.path(), ['/login']) === -1;
-            var loggedIn = $rootScope.globals.currentUser;
-            if (restrictedPage && !loggedIn) {
-                $location.path('/login');
-                }
-              });
-       }
+ //  run.$inject = ['$rootScope', '$location', '$cookies', '$http'];
+ // function run($rootScope, $location, $cookies, $http) {
+ //     // El usuario continuo logeado aun despues de refrescar la pagina
+ //     $rootScope.globals = $cookies.getObject('globals') || {};
+ //     if ($rootScope.globals.currentUser) {
+ //         $http.defaults.headers.common['Authorization'] = 'Basic ' + $rootScope.globals.currentUser.authdata;
+ //     }
+ //     $rootScope.$on('$locationChangeStart', function (event, next, current) {
+ //            // devuelve al login si entra a uno zona restrica, si no se encuentra logueado
+ //            var restrictedPage = $.inArray($location.path(), ['/login']) === -1;
+ //            var loggedIn = $rootScope.globals.currentUser;
+ //            if (restrictedPage && !loggedIn) {
+ //                $location.path('/login');
+ //                }
+ //              });
+ //       }
 
        function tabCtrl($scope, $location, $log) {
         $scope.selectedIndex = 0;

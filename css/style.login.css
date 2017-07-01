@@ -14,6 +14,7 @@
 h2{
   color: #bf0000;
   font-size: 3.000em;
+  margin-bottom: 50px;
 }
 a{
   color: #fefefe;
@@ -21,6 +22,7 @@ a{
 }
 label{
   font-size: 1.500em;
+  color: #fff;
 }
 #option{
   font-size: 1.250em;

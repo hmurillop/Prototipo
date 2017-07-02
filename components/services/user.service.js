@@ -4,11 +4,14 @@
 	.module('myApp')
 	.service('userService', userService);
 
-	userService.$inject = ['$log','$http','AuthService']
+	userService.$inject = ['$log','$http']
 
-	function userService($log,$http, AuthService){
+	function userService($log,$http){
 
-		var users = [];
+		var users = [
+			{email : 'admin@paradigm.com', password : 'admin'},
+			{email : 'asist@paragigm.com', password : 'asist'}
+		];
 
 		var publicAPI ={
 			addUser : _addUser,

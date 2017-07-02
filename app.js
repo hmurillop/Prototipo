@@ -1,11 +1,11 @@
 (function(){
   angular
-  .module('myApp',['appRoutes', 'ngMaterial'])
+  .module('myApp',['appRoutes', 'ngMaterial', 'LocalStorageModule'])
   .config(function($mdThemingProvider) {
   		$mdThemingProvider.theme('default')
     		.primaryPalette('indigo')
     		.accentPalette('blue-grey');
-        // $mdThemingProvider.theme('default').foregroundPalette[3] = "rgba(0,0,0)";
+        $mdThemingProvider.theme('default').foregroundPalette[3] = "rgba(0,0,0)";
 
 	});
 })();

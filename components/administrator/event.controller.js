@@ -26,7 +26,6 @@
         vm.event.stateEvent = pEvent.stateEvent;
         vm.event.startDate = pEvent.startDate;
         vm.event.endDate = pEvent.endDate;
-        // vm.event.category = pEvent.category;
         vm.event.gender = pEvent.gender;
         vm.event.age = pEvent.age;
         vm.event.weight = pEvent.weight;
@@ -38,6 +37,9 @@
         vm.event.place = pEvent.place;
         vm.event.location = pEvent.location;
         vm.event.brand = pEvent.brand;
+        vm.event.business = pEvent.business;
+        vm.event.typeSponsor = pEvent.typeSponsor;
+        vm.event.brand = pEvent.brand;
       }
 
       vm.update = function(){
@@ -47,7 +49,6 @@
           stateEvent: vm.event.stateEvent,
           startDate: vm.event.startDate,
           endDate: vm.event.endDate,
-          // category: vm.event.category,
           gender: vm.event.gender,
           age: vm.event.age,
           weight: vm.event.weight,
@@ -58,7 +59,10 @@
           costRegistration: vm.event.costRegistration,
           place: vm.event.place,
           location: vm.event.location,
-          brand: vm.event.brand
+          brand: vm.event.brand,
+          business: vm.event.business,
+          typeSponsor: vm.event.typeSponsor,
+          selectFile: vm.event.selectFile
         }
         eventService.updateEvent(eventEdited);
         clean();

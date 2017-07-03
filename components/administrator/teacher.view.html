@@ -1,0 +1,158 @@
+<section class="containTeacher">
+<h2>Registro profesores</h2>
+
+<hr>
+
+<div class="row">
+  <form name="frmTeacher" ng-submit="vm.save(vm.teacher)" novalidate autocomplete="off">
+
+    <div class="col-offset-1"></div>
+
+    <div class="col-md-6">
+
+      <!-- input -->
+      <div class="form-group col-md-12">
+        <label class="col-md-3">Cédula</label>
+        <span class="col-md-1"><div ng-messages="frmTeacher.id.$error">
+          <div ng-messages-include="components/includes/messages.html"></div>
+        </div></span>
+        <input class="col-md-4 col-offset-2" type="text" ng-model="vm.teacher.id" name="id" required ng-pattern="/^[0-9]{9}$/">
+      </div>
+
+      <!-- input -->
+      <div class="form-group col-md-12">
+        <label class="col-md-3">Nombre</label>
+        <span class="col-md-1"><div ng-messages="frmTeacher.name.$error">
+          <div ng-messages-include="components/includes/messages.html"></div>
+        </div></span>
+        <input class="col-md-4 col-offset-2" type="text" ng-model="vm.teacher.name" name="name" required>
+      </div>
+
+      <!-- input -->
+      <div class="form-group col-md-12">
+        <label class="col-md-3">Segundo nombre</label>
+        <span class="col-md-1"><div ng-messages="frmTeacher.secondName.$error">
+          <div ng-messages-include="components/includes/messages.html"></div>
+        </div></span>
+        <input class="col-md-4 col-offset-2" type="text" ng-model="vm.teacher.secondName" name="secondName" required>
+      </div>
+
+      <!-- input -->
+      <div class="form-group col-md-12">
+        <label class="col-md-3">Primer apellido</label>
+        <span class="col-md-1"><div ng-messages="frmTeacher.surName.$error">
+          <div ng-messages-include="components/includes/messages.html"></div>
+        </div></span>
+        <input class="col-md-4 col-offset-2" type="text" ng-model="vm.teacher.surName" name="surName" required>
+      </div>
+
+      <!-- input -->
+      <div class="form-group col-md-12">
+        <label class="col-md-3">Segundo apellido</label>
+        <span class="col-md-1"><div ng-messages="frmTeacher.secondSurName.$error">
+          <div ng-messages-include="components/includes/messages.html"></div>
+        </div></span>
+        <input class="col-md-4 col-offset-2" type="text" ng-model="vm.teacher.secondSurName" name="secondSurName" required>
+      </div>
+
+    </div>
+
+    <div class="col-md-6">
+
+      <!-- input -->
+      <div class="form-group col-md-12">
+        <label class="col-md-3">Fecha de nacimiento</label>
+        <span class="col-md-1"><div ng-messages="frmTeacher.birthDate.$error">
+          <div ng-messages-include="components/includes/messages.html"></div>
+        </div></span>
+        <input class="col-md-4 col-offset-2" type="date" ng-model="vm.teacher.birthDate" name="birthDate" required>
+      </div>
+
+      <!-- input -->
+      <div class="form-group col-md-12">
+        <label class="col-md-3">Dirección de domicilio</label>
+        <span class="col-md-1"><div ng-messages="frmTeacher.address.$error">
+          <div ng-messages-include="components/includes/messages.html"></div>
+        </div></span>
+        <input class="col-md-4 col-offset-2" type="text" ng-model="vm.teacher.address" name="address" required>
+      </div>
+
+      <!-- input -->
+      <div class="form-group col-md-12">
+        <label class="col-md-3">Estado civil</label>
+        <span class="col-md-1"><div ng-messages="frmTeacher.civilStatus.$error">
+          <div ng-messages-include="components/includes/messages.html"></div>
+        </div></span>
+        <input class="col-md-4 col-offset-2" type="text" ng-model="vm.teacher.civilStatus" name="civilStatus" required>
+      </div>
+
+      <!-- input -->
+      <div class="form-group col-md-12">
+        <label class="col-md-3">Teléfono</label>
+        <span class="col-md-1"><div ng-messages="frmTeacher.phone.$error">
+          <div ng-messages-include="components/includes/messages.html"></div>
+        </div></span>
+        <input class="col-md-4 col-offset-2" type="text" ng-model="vm.teacher.phone" name="phone" required ng-pattern="/^[0-9]{8}$/">
+      </div>
+
+      <!-- input -->
+      <div class="form-group col-md-12">
+        <label class="col-md-3">Correo electrónico</label>
+        <span class="col-md-1"><div ng-messages="frmTeacher.email.$error">
+          <div ng-messages-include="components/includes/messages.html"></div>
+        </div></span>
+        <input class="col-md-4 col-offset-2" type="text" ng-model="vm.teacher.email" name="email" required>
+      </div>
+
+    </div>
+
+    <div class="col-md-12">
+      <div class="col-md-7"></div>
+      <button class="col-md-1" type="button" value="Actualizar" ng-click="vm.update(teacher)" id="buttonAct">Actualizar</button>
+      <div class="col-md-1"></div>
+      <button class="col-md-1" type="submit" ng-click="vm.reset()" ng-disabled="frmTeacher.$invalid" id="buttonAct">Registrar</button>
+    </div>
+
+  </form>
+</div>
+
+<!--Tabla de registros   -->
+
+<div class="container contTable">
+  <div class="row panelTable">
+    <h3>Profesores</h3>
+    <input id="filterTeacher" type="search" name="nameFilter" ng-model="vm.nameFilter" placeholder="Buscar">
+  </div>
+
+  <table id="tblTeacher">
+    <thead id="tHead">
+      <tr id="lineTh">
+        <th>Nombre</th>
+        <th>Segundo nombre</th>
+        <th>Primer apellido</th>
+        <th>Segundo apellido</th>
+        <th>Fecha de nacimiento</th>
+        <th>Cédula</th>
+        <th>Dirección de domicilio</th>
+        <th>Estado civil</th>
+        <th>Teléfono</th>
+        <th>Correo electrónico</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="teacher in vm.teachers | filter:vm.nameFilter">
+        <td>{{teacher.name}}</td>
+        <td>{{teacher.secondName}}</td>
+        <td>{{teacher.surName}}</td>
+        <td>{{teacher.secondSurName}}</td>
+        <td>{{teacher.birthDate | date}}</td>
+        <td>{{teacher.id}}</td>
+        <td>{{teacher.address}}</td>
+        <td>{{teacher.civilStatus}}</td>
+        <td>{{teacher.phone}}</td>
+        <td>{{teacher.email}}</td>
+        <td><input type="button" value="Editar" ng-click="vm.getInfo(teacher)"></td>
+      </tr>
+    </tbody>
+  </table>

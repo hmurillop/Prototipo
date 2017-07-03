@@ -1,6 +1,6 @@
 #login{
   text-align: left;
-  padding-left: 52%;
+  padding-left: 50%;
   padding-top: 150px;
   color: #fefefe;
 }
@@ -21,7 +21,7 @@ a{
   text-decoration: none;
 }
 label{
-  font-size: 1.500em;
+  font-size: 1.300em;
   color: #fff;
 }
 #option{
@@ -34,4 +34,7 @@ label{
   font-size: 1.500em;
   border-radius: 0px;
   padding: 15px;
+}
+#input_1, #input_0{
+  color: #fff;
 }

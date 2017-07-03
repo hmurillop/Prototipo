@@ -7,7 +7,7 @@
 	userService.$inject = ['$log','$http']
 
 	function userService($log,$http){
-
+		/*Objeto con datos quemados*/
 		var users = [
 			{email : 'admin@paradigm.com', password : 'admin'},
 			{email : 'asist@paragigm.com', password : 'asist'}

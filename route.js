@@ -44,36 +44,37 @@
        }]
       },
       controller: 'adminController',
-      controllerAs: 'vm',
-
-        views : {
-          'vistaAcademy':{
-            url: '/admin/academy',
-            templateUrl: 'components/administrator/academy.view.html',
-            css: './css/style.academy.css',
-            resolve: {
-             load: ['$ocLazyLoad', function($ocLazyLoad){
-              return $ocLazyLoad.load('./components/administrator/academy.controller.js')
-             }]
-            },
-            controller: 'academyController',
-            controllerAs: 'vm'
-          },
-
-          'vistaEvents':{
-            url: '/admin/event',
-            templateUrl: 'components/administrator/event.view.html',
-            css: './css/style.event.css',
-            resolve: {
-             load: ['$ocLazyLoad', function($ocLazyLoad){
-              return $ocLazyLoad.load('./components/administrator/event.controller.js')
-             }]
-            },
-            controller: 'eventController',
-            controllerAs: 'vm'
-          }
-
-          }
+      controllerAs: 'vm'
+      // ,
+      //
+      //   views : {
+      //     'vistaAcademy':{
+      //       url: '/admin/academy',
+      //       templateUrl: 'components/administrator/academy.view.html',
+      //       css: './css/style.academy.css',
+      //       resolve: {
+      //        load: ['$ocLazyLoad', function($ocLazyLoad){
+      //         return $ocLazyLoad.load('./components/administrator/academy.controller.js')
+      //        }]
+      //       },
+      //       controller: 'academyController',
+      //       controllerAs: 'vm'
+      //     },
+      //
+      //     'vistaEvents':{
+      //       url: '/admin/event',
+      //       templateUrl: 'components/administrator/event.view.html',
+      //       css: './css/style.event.css',
+      //       resolve: {
+      //        load: ['$ocLazyLoad', function($ocLazyLoad){
+      //         return $ocLazyLoad.load('./components/administrator/event.controller.js')
+      //        }]
+      //       },
+      //       controller: 'eventController',
+      //       controllerAs: 'vm'
+      //     }
+      //
+      //     }
     })
 
     .state('login',{
@@ -89,18 +90,18 @@
       controllerAs: 'vm'
     })
 
-    // .state('event',{
-    //   url: '/event',
-    //   templateUrl: 'components/administrator/event.view.html',
-    //   css: './css/style.event.css',
-    //   resolve: {
-    //    load: ['$ocLazyLoad', function($ocLazyLoad){
-    //     return $ocLazyLoad.load('./components/administrator/event.controller.js')
-    //    }]
-    //   },
-    //   controller: 'eventController',
-    //   controllerAs: 'vm'
-    // })
+    .state('event',{
+      url: '/event',
+      templateUrl: 'components/administrator/event.view.html',
+      css: './css/style.event.css',
+      resolve: {
+       load: ['$ocLazyLoad', function($ocLazyLoad){
+        return $ocLazyLoad.load('./components/administrator/event.controller.js')
+       }]
+      },
+      controller: 'eventController',
+      controllerAs: 'vm'
+    })
 
     .state('eventTorneo',{
       url: '/eventTorneo',
@@ -128,18 +129,18 @@
       controllerAs: 'vm'
     })
 
-    // .state('academy',{
-    //   url: '/academy',
-    //   templateUrl: 'components/administrator/academy.view.html',
-    //   css: './css/style.academy.css',
-    //   resolve: {
-    //    load: ['$ocLazyLoad', function($ocLazyLoad){
-    //     return $ocLazyLoad.load('./components/administrator/academy.controller.js')
-    //    }]
-    //   },
-    //   controller: 'academyController',
-    //   controllerAs: 'vm'
-    // })
+    .state('academy',{
+      url: '/academy',
+      templateUrl: 'components/administrator/academy.view.html',
+      css: './css/style.academy.css',
+      resolve: {
+       load: ['$ocLazyLoad', function($ocLazyLoad){
+        return $ocLazyLoad.load('./components/administrator/academy.controller.js')
+       }]
+      },
+      controller: 'academyController',
+      controllerAs: 'vm'
+    })
 
     $urlRouterProvider.otherwise('/landing');
   }

@@ -11,6 +11,7 @@
       var vm = this;
       vm.user = {};
 
+      /*Valida que los datos sean correctos*/
       vm.login = function(credentials){
         var resp = AuthService.logIn(credentials);
 

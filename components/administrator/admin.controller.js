@@ -15,7 +15,7 @@
       }init();
 
        $scope.selectedIndex = 0;
-
+       /*Funcion para el tabs*/
        $scope.$watch('selectedIndex', function(current, old) {
            switch (current) {
                case 0:

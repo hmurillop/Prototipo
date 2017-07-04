@@ -1,57 +1,55 @@
 <section class="containEvent">
-<h2>Registrar eventos exhibición</h2>
-
-<hr>
+<h2>REGISTRAR EVENTOS EXHIBICIÓN</h2>
 
 <div class="row">
 
   <form name="frmEvent" ng-submit="vm.save(vm.event)" novalidate autocomplete="off">
 
-    <div class="col-md-6">
+    <div class="col-md-offset-2 col-md-4">
 
       <!-- input -->
-      <div class="form-group name col-md-12">
-        <label class="col-md-3">Nombre</label>
-        <span class="col-md-1"><div ng-messages="frmEvent.name.$error">
+      <div class="form-group col-xs-12 col-sm-12">
+        <label class="col-xs-3 col-sm-4 col-md-4">Nombre</label>
+        <input class="col-xs-5 col-sm-4 col-md-5" type="text" ng-model="vm.event.name" name="name" required>
+        <div ng-messages="frmEvent.name.$error">
           <div ng-messages-include="components/includes/messages.html"></div>
-        </div></span>
-        <input class="col-md-4 col-offset-2" type="text" ng-model="vm.event.name" name="name" required>
+        </div>
       </div>
 
       <!-- input -->
-      <div class="form-group col-md-12">
-        <label class="col-md-3">Teléfono</label>
-        <span class="col-md-1"><div ng-messages="frmEvent.phone.$error">
+      <div class="form-group col-xs-12 col-sm-12">
+        <label class="col-xs-3 col-sm-4 col-md-4">Teléfono</label>
+        <input class="col-xs-5 col-sm-4 col-md-5" type="text" ng-model="vm.event.phone" name="phone" required ng-pattern="/^[0-9]{8}$/">
+        <div ng-messages="frmEvent.phone.$error">
           <div ng-messages-include="components/includes/messages.html"></div>
-        </div></span>
-        <input class="col-md-4 col-offset-2" type="text" ng-model="vm.event.phone" name="phone" required ng-pattern="/^[0-9]{8}$/">
+        </div>
       </div>
 
       <!-- input -->
-      <div class="form-group col-md-12">
-        <label class="col-md-3">Estado del evento</label>
-        <span class="col-md-1"><div ng-messages="frmEvent.stateEvent.$error">
+      <div class="form-group col-xs-12 col-sm-12">
+        <label class="col-xs-3 col-sm-4 col-md-4">Estado del evento</label>
+        <input class="col-xs-5 col-sm-4 col-md-5" type="text" ng-model="vm.event.stateEvent" name="stateEvent" required>
+        <div ng-messages="frmEvent.stateEvent.$error">
           <div ng-messages-include="components/includes/messages.html"></div>
-        </div></span>
-        <input class="col-md-4" type="text" ng-model="vm.event.stateEvent" name="stateEvent" required>
+        </div>
       </div>
 
       <!-- input -->
-      <div class="form-group col-md-12">
-        <label class="col-md-3">Fecha de inicio</label>
-        <span class="col-md-1"><div ng-messages="frmEvent.startDate.$error">
+      <div class="form-group col-xs-12 col-sm-12">
+        <label class="col-xs-3 col-sm-4 col-md-4">Fecha de inicio</label>
+        <input class="col-xs-5 col-sm-4 col-md-5" type="date" ng-model="vm.event.startDate" name="startDate" required>
+        <div ng-messages="frmEvent.startDate.$error">
           <div ng-messages-include="components/includes/messages.html"></div>
-        </div></span>
-        <input class="col-md-4" type="date" ng-model="vm.event.startDate" name="startDate" required>
+        </div>
       </div>
 
       <!-- input -->
-      <div class="form-group col-md-12">
-        <label class="col-md-3">Fecha de finalizado</label>
-        <span class="col-md-1"><div ng-messages="frmEvent.endDate.$error">
+      <div class="form-group col-xs-12 col-sm-12">
+        <label class="col-xs-3 col-sm-4 col-md-4">Fecha de finalizado</label>
+        <input class="col-xs-5 col-sm-4 col-md-5" type="date" ng-model="vm.event.endDate" name="endDate" required>
+        <div ng-messages="frmEvent.endDate.$error">
           <div ng-messages-include="components/includes/messages.html"></div>
-        </div></span>
-        <input class="col-md-4 col-offset-2" type="date" ng-model="vm.event.endDate" name="endDate" required>
+        </div>
       </div>
 
       <!-- input -->
@@ -60,115 +58,115 @@
       </div>
 
       <!-- input -->
-      <div class="form-group col-md-12">
-        <label class="col-md-3">Género</label>
-        <span class="col-md-1"><div ng-messages="frmEvent.gender.$error">
-          <div ng-messages-include="components/includes/messages.html"></div>
-        </div></span>
-        <select class="col-md-4 col-offset-2" ng-model="vm.event.gender" name="gender" required>
+      <div class="form-group col-xs-12 col-sm-12">
+        <label class="col-xs-3 col-sm-4 col-md-4">Género</label>
+        <select class="col-xs-5 col-sm-4 col-md-5" ng-model="vm.event.gender" name="gender" required>
           <option value="">---Indique la género---</option>
           <option value="male">Masculino</option>
           <option value="female">Femenino</option>
           <option value="undefined">Indefinido</option>
           </select>
+          <div ng-messages="frmEvent.gender.$error">
+            <div ng-messages-include="components/includes/messages.html"></div>
+          </div>
       </div>
 
       <!-- input -->
-      <div class="form-group col-md-12">
-        <label class="col-md-3">Edad</label>
-        <span class="col-md-1"><div ng-messages="frmEvent.age.$error">
-          <div ng-messages-include="components/includes/messages.html"></div>
-        </div></span>
-        <select class="col-md-4 col-offset-2" ng-model="vm.event.age" name="age" required>
+      <div class="form-group col-xs-12 col-sm-12">
+        <label class="col-xs-3 col-sm-4 col-md-4">Edad</label>
+        <select class="col-xs-5 col-sm-4 col-md-5" ng-model="vm.event.age" name="age" required>
           <option value="">---Indique la edad---</option>
           <option value="junior">Infantil o Junior (4-11 años)</option>
           <option value="cadet">Cadete (12-16 años)</option>
           <option value="elite">Élite (17-23 años)</option>
           <option value="senior">Senior (23 años o más)</option>
         </select>
+        <div ng-messages="frmEvent.age.$error">
+          <div ng-messages-include="components/includes/messages.html"></div>
+        </div>
       </div>
 
       <!-- input -->
-      <div class="form-group col-md-12">
-        <label class="col-md-3">Peso</label>
-        <span class="col-md-1"><div ng-messages="frmEvent.weight.$error">
-          <div ng-messages-include="components/includes/messages.html"></div>
-        </div></span>
-        <select class="col-md-4 col-offset-2" ng-model="vm.event.weight" name="weight" required>
-          <option value="">---Indique la peso---</option>
+      <div class="form-group col-xs-12 col-sm-12">
+        <label class="col-xs-3 col-sm-4 col-md-4">Peso</label>
+        <select class="col-xs-5 col-sm-4 col-md-5" ng-model="vm.event.weight" name="weight" required>
+          <option value="">---Indique el peso---</option>
           <option value="junior">il-Yang(pluma, 51kg)</option>
           <option value="cadet">i-Yang (gallo, 52 kg a 59 kg)</option>
           <option value="elite">o-Yang (Supergallo, 60 kg a 65 kg)</option>
           <option value="seniorSan">sam-Yang (Wélter, 66 kg a 74 kg)</option>
           <option value="seniorSiu">siu-Yang (Wélter, 74 kg)</option>
         </select>
+        <div ng-messages="frmEvent.weight.$error">
+          <div ng-messages-include="components/includes/messages.html"></div>
+        </div>
       </div>
 
       <!-- input -->
-      <div class="form-group col-md-12">
-        <label class="col-md-3">Invitados especiales</label>
-        <span class="col-md-1"><div ng-messages="frmEvent.specialGuests.$error">
+      <div class="form-group col-xs-12 col-sm-12">
+        <label class="col-xs-3 col-sm-4 col-md-4">Invitados especiales</label>
+        <input class="col-xs-5 col-sm-4 col-md-5" type="text" ng-model="vm.event.specialGuests" name="specialGuests" required>
+        <div ng-messages="frmEvent.specialGuests.$error">
           <div ng-messages-include="components/includes/messages.html"></div>
-        </div></span>
-        <input class="col-md-4 col-offset-2" type="text" ng-model="vm.event.specialGuests" name="specialGuests" required>
+        </div>
       </div>
 
       <!-- input -->
-      <div class="form-group col-md-12">
-        <label class="col-md-3">Organizaciones beneficas</label>
-        <span class="col-md-1"><div ng-messages="frmEvent.charities.$error">
+      <div class="form-group col-xs-12 col-sm-12">
+        <label class="col-xs-3 col-sm-4 col-md-4">Organizaciones beneficas</label>
+        <input class="col-xs-5 col-sm-4 col-md-5" type="text" ng-model="vm.event.charities" name="charities">
+        <div ng-messages="frmEvent.charities.$error">
           <div ng-messages-include="components/includes/messages.html"></div>
-        </div></span>
-        <input class="col-md-4 col-offset-2" type="text" ng-model="vm.event.charities" name="charities">
+        </div>
       </div>
 
     </div>
 
-    <div class="col-md-6">
+    <div class="col-sm-6 col-md-4">
 
       <!-- input -->
-      <div class="form-group col-md-12">
-        <label class="col-md-3">Capacidad</label>
-        <span class="col-md-1"><div ng-messages="frmEvent.capacity.$error">
+      <div class="form-group col-xs-12 col-sm-12">
+        <label class="col-xs-3 col-sm-4 col-md-4">Capacidad</label>
+        <input class="col-xs-5 col-sm-4 col-md-5" type="text" ng-model="vm.event.capacity" name="capacity" required>
+        <div ng-messages="frmEvent.capacity.$error">
           <div ng-messages-include="components/includes/messages.html"></div>
-        </div></span>
-        <input class="col-md-4 col-offset-2" type="text" ng-model="vm.event.capacity" name="capacity" required>
+        </div>
       </div>
 
       <!-- input -->
-      <div class="form-group col-md-12">
-        <label class="col-md-3">Horario</label>
-        <span class="col-md-1"><div ng-messages="frmEvent.schedule.$error">
+      <div class="form-group col-xs-12 col-sm-12">
+        <label class="col-xs-3 col-sm-4 col-md-4">Horario</label>
+        <input class="col-xs-5 col-sm-4 col-md-5" type="text" ng-model="vm.event.schedule" name="schedule" required>
+        <div ng-messages="frmEvent.schedule.$error">
           <div ng-messages-include="components/includes/messages.html"></div>
-        </div></span>
-        <input class="col-md-4 col-offset-2" type="text" ng-model="vm.event.schedule" name="schedule" required>
+        </div>
       </div>
 
       <!-- input -->
-      <div class="form-group col-md-12">
-        <label class="col-md-3">Costo de inscripción</label>
-        <span class="col-md-1"><div ng-messages="frmEvent.costRegistration.$error">
+      <div class="form-group col-xs-12 col-sm-12">
+        <label class="col-xs-3 col-sm-4 col-md-4">Costo de inscripción</label>
+        <input class="col-xs-5 col-sm-4 col-md-5" type="text" ng-model="vm.event.costRegistration" name="costRegistration" required>
+        <div ng-messages="frmEvent.costRegistration.$error">
           <div ng-messages-include="components/includes/messages.html"></div>
-        </div></span>
-        <input class="col-md-4 col-offset-2" type="text" ng-model="vm.event.costRegistration" name="costRegistration" required>
+        </div>
       </div>
 
       <!-- input -->
-      <div class="form-group col-md-12">
-        <label class="col-md-3">Lugar</label>
-        <span class="col-md-1"><div ng-messages="frmEvent.place.$error">
+      <div class="form-group col-xs-12 col-sm-12">
+        <label class="col-xs-3 col-sm-4 col-md-4">Lugar</label>
+        <input class="col-xs-5 col-sm-4 col-md-5" type="text" ng-model="vm.event.place" name="place" required>
+        <div ng-messages="frmEvent.place.$error">
           <div ng-messages-include="components/includes/messages.html"></div>
-        </div></span>
-        <input class="col-md-4 col-offset-2" type="text" ng-model="vm.event.place" name="place" required>
+        </div>
       </div>
 
       <!-- input -->
-      <div class="form-group col-md-12">
-        <label class="col-md-3">Ubicación</label>
-        <span class="col-md-1"><div ng-messages="frmEvent.location.$error">
+      <div class="form-group col-xs-12 col-sm-12">
+        <label class="col-xs-3 col-sm-4 col-md-4">Ubicación</label>
+        <input class="col-xs-5 col-sm-4 col-md-5" type="type" ng-model="vm.event.location" name="location" required>
+        <div ng-messages="frmEvent.location.$error">
           <div ng-messages-include="components/includes/messages.html"></div>
-        </div></span>
-        <input class="col-md-4 col-offset-2" type="type" ng-model="vm.event.location" name="location" required>
+        </div>
       </div>
 
       <!-- input -->
@@ -177,41 +175,43 @@
       </div>
 
       <!-- input -->
-      <div class="form-group col-md-12">
-        <label class="col-md-3">Marca</label>
-        <span class="col-md-1"><div ng-messages="frmEvent.brand.$error">
+      <div class="form-group col-xs-12 col-sm-12">
+        <label class="col-xs-3 col-sm-4 col-md-4">Marca</label>
+        <input class="col-xs-5 col-sm-4 col-md-5" type="type" ng-model="vm.event.brand" name="brand" required>
+        <div ng-messages="frmEvent.brand.$error">
           <div ng-messages-include="components/includes/messages.html"></div>
-        </div></span>
-        <input class="col-md-4 col-offset-2" type="type" ng-model="vm.event.brand" name="brand" required>
+        </div>
       </div>
 
       <!-- input -->
-      <div class="form-group col-md-12">
-        <label class="col-md-3">Empresa</label>
-        <span class="col-md-1"><div ng-messages="frmEvent.business.$error">
+      <div class="form-group col-xs-12 col-sm-12">
+        <label class="col-xs-3 col-sm-4 col-md-4">Empresa</label>
+        <input class="col-xs-5 col-sm-4 col-md-5" type="type" ng-model="vm.event.business" name="business" required>
+        <div ng-messages="frmEvent.business.$error">
           <div ng-messages-include="components/includes/messages.html"></div>
-        </div></span>
-        <input class="col-md-4 col-offset-2" type="type" ng-model="vm.event.business" name="business" required>
+        </div>
       </div>
 
       <!-- input -->
-      <div class="form-group col-md-12">
-        <label class="col-md-3">Tipo de patrocinador</label>
-        <span class="col-md-1"><div ng-messages="frmEvent.typeSponsor.$error">
+      <div class="form-group col-xs-12 col-sm-12">
+        <label class="col-xs-3 col-sm-4 col-md-4">Tipo de patrocinador</label>
+        <input class="col-xs-5 col-sm-4 col-md-5" type="type" ng-model="vm.event.typeSponsor" name="typeSponsor" required>
+        <div ng-messages="frmEvent.typeSponsor.$error">
           <div ng-messages-include="components/includes/messages.html"></div>
-        </div></span>
-        <input class="col-md-4 col-offset-2" type="type" ng-model="vm.event.typeSponsor" name="typeSponsor" required>
+        </div>
       </div>
 
-      <!-- input -->
-      <div class="form-group col-md-12">
-        <label class="col-md-3">Seleccione un archivo (Logo)</label>
-        <span class="col-md-1"><div ng-messages="frmEvent.selectFile.$error">
-          <div ng-messages-include="components/includes/messages.html"></div>
-        </div></span>
-        <input class="col-md-4 col-offset-2" type="type" ng-model="vm.event.selectFile" name="selectFile" required>
+      <div class="form-group col-xs-12 col-sm-12 layout-gt-sm="row">
+        <md-input-container class="md-block">
+          <label class="col-xs-3 col-sm-4 col-md-4">Image</label>
+          <input class="col-xs-5 col-sm-4 col-md-5" type="file" id="photo" ng-model="vm.image">
+        </md-input-container>
       </div>
 
+    </div>
+
+    <div class="col-xs-12">
+      <p class="col-md-offset-5 col-md-7">* = Datos requeridos</p>
     </div>
 
     <div class="col-md-12">

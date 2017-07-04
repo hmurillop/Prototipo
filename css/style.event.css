@@ -1,44 +1,53 @@
 .containEvent{
-  font-size: 16px;
+  font-size: 1em;
 	font-family: futura;
   background-color: #fff;
 }
+h1, h3, h4, h5, h6{
+  margin: 0 auto;
+}
 h2{
-	font-size: 1.500em;
-	text-align: left;
-	font-family: roboto;
-  padding: 5%  6%  1% 6% ;
-  margin: 0;
+  font-size: 1.500em;
+  text-align: left;
+  font-family: robotomedium;
+  letter-spacing: 3px;
+  border-bottom: 1px solid #000;
+  width: 90%;
+  margin-bottom: 30px;
+  margin: 0 auto;  padding: 0 0 20px 3px;
 }
 h6{
   font-size: 1.650em;
   text-align: left;
-}
-hr{
-	color: #fff;
+  margin-bottom: 20px;
 }
 /*Estilos del form*/
+form{
+  margin-top: 50px;
+}
 form label{
-	text-align: left;
-  font-size: 0.875em;
-  margin-bottom: 0.5%;
+  text-align: left;
+  font-size: 1.1em;
+  color: #525252;
+  font-family: futura;
 }
 form input{
 	outline: none;
   border: 0px;
-  border-bottom: 2px solid #9a9a9a;
+  border-bottom: 1px solid #9a9a9a;
 }
 form select{
-  border-bottom: 2px solid #9a9a9a;
+  outline: none;
+  border-bottom: 1px solid #9a9a9a;
 	border-top: 2px;
 	border-left: 2px;
 	border-right: 2px;
   border-color: #9a9a9a;
   margin-bottom: 10px;
 }
-/*.lo{
-  height: 50px;
-}*/
+p{
+  color: #f06d50;
+}
 ng-messages{
   width: 50px;
 }
@@ -66,16 +75,16 @@ div.ng-active {
   font-size: 0.9em;
   letter-spacing: 1px;
 }
-input.ng-invalid.ng-touched, select.ng-invalid.ng-touched {
-  border-bottom: 2px solid #e74c3c;
+input.ng-invalid.ng-touched {
+  /*border-bottom: 1px solid #E7777C;*/
 }
-input.ng-valid.ng-touched, select.ng-valid.ng-touched {
-  border-bottom: 2px solid #2ecc71;
-}
-input.ng-invalid.ng-touched.ng-empty, select.ng-invalid.ng-touched.ng-empty{
-  border-bottom: 2px solid #3498db;
+input.ng-valid.ng-touched {
+  border-bottom: 1px solid #40C5A0;
 }
 
+input.ng-invalid.ng-touched.ng-empty{
+  /*border-bottom: 1px solid #3498db;*/
+}
 /*Estilos tabla*/
 .contTable {
   width: 95%;

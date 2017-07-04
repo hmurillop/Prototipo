@@ -3,15 +3,26 @@
   angular
     .module('myApp')
     .controller('eventController', eventController);
-    eventController.$inject = ['eventService'];
-    function eventController(eventService){
+    eventController.$inject = ['eventService','ImageService','Upload'];
+    function eventController(eventService,ImageService,Upload){
 
       var vm = this;
+      vm.cloudObj = ImageService.getConfiguration();
 
       function init(){
         vm.events = eventService.getEvents();
         vm.event = {};
       }init();
+
+      vm.preSave = function(pNewEvent){
+        vm.cloudObj.data.file = document.getElementById("photo").files[0];
+        Upload.upload(vm.cloudObj)
+          .success(function(data){
+            pNewEvent.photo = data.url;
+            vm.save(data.url);
+
+          });
+      }
 
       vm.save = function(pNewEvent){
         eventService.setEvents(pNewEvent);

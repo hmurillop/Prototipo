@@ -1,28 +1,38 @@
 .containTeacher{
-	font-size: 16px;
+	font-size: 1em;
 	font-family: futura;
-    background-color: #fff;
+  background-color: #fff;
+}
+h1, h2, h3, h4, h5, h6{
+  margin: 0 auto;
 }
 h2{
 	font-size: 1.500em;
 	text-align: left;
-	font-family: robotoblack;
-  padding: 5%  6%  1% 6% ;
-  margin: 0;
+	font-family: robotomedium;
+  letter-spacing: 3px;
+  border-bottom: 1px solid #000;
+  width: 90%;
+  margin-bottom: 30px;
+  margin: 0 auto;  padding: 0 0 20px 3px;
 }
-hr{
-	color: #fff;
+p{
+  color: #f06d50;
 }
 /*Estilos del form*/
+form{
+  margin-top: 50px;
+}
 form label{
 	text-align: left;
-  font-size: 0.875em;
-  margin-bottom: 0.5%;
+  font-size: 1.1em;
+  color: #525252;
+  font-family: futura;
 }
 form input{
 	outline: none;
   border: 0px;
-  border-bottom: 2px solid #9a9a9a;
+  border-bottom: 1px solid #9a9a9a;
 }
 form select{
   border-bottom: 2px solid #9a9a9a;
@@ -40,7 +50,7 @@ ng-messages{
 }
 /*Estilos bottones*/
 #buttonAct, #buttonReg{
-  border-style: 1px solid #000;
+  border: 1px solid #000;
   font-family: futura;
   background-color: #000;
   color: #fff;
@@ -50,7 +60,7 @@ ng-messages{
 #buttonAct:hover, #buttonReg:hover{
   background-color: #fff;
   color: #000;
-  border-style: 1px solid #000;
+  border: 1px solid #000;
   transition: 1s;
 }
 /*Estilos validaciones*/
@@ -62,14 +72,13 @@ div.ng-active {
   font-size: 0.9em;
   letter-spacing: 1px;
 }
-input.ng-invalid.ng-touched, select.ng-invalid.ng-touched {
-  border-bottom: 2px solid #e74c3c;
+.colorFormat{
+  color : red;
+  font-size: 0.7em;
 }
-input.ng-valid.ng-touched, select.ng-valid.ng-touched {
-  border-bottom: 2px solid #2ecc71;
-}
-input.ng-invalid.ng-touched.ng-empty, select.ng-invalid.ng-touched.ng-empty{
-  border-bottom: 2px solid #3498db;
+
+input.ng-valid.ng-touched {
+  border-bottom: 1px solid #40C5A0;
 }
 /*Estilos tabla*/
 .contTable {

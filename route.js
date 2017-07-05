@@ -2,7 +2,7 @@
   'use strict';
   angular
 
-  .module('appRoutes', ['ui.router', 'oc.lazyLoad','ngMessages','angularCSS','ngPassword'])
+  .module('appRoutes', ['ui.router', 'oc.lazyLoad','ngMessages','angularCSS','ngPassword','ngFileUpload'])
   .config(configuration)
 
   configuration.$inject = ['$stateProvider','$urlRouterProvider'];
@@ -112,7 +112,6 @@
       controller: 'academyController',
       controllerAs: 'vm'
     })
-<<<<<<< HEAD
 
     .state('teacher',{
       url: '/teacher',
@@ -124,9 +123,9 @@
        }]
       },
       controller: 'teacherController',
+      controllerAs: 'vm'
+    }
 
-=======
->>>>>>> master
   .state('profileInst',{
       url: '/profileInst',
       templateUrl: 'components/profiles/profileInst.view.html',
@@ -151,20 +150,7 @@
       controller: 'profileStudController',
       controllerAs: 'vm'
     })
-<<<<<<< HEAD
 
-=======
-    .state('teacher',{
-      url: '/teacher',
-      templateUrl: 'components/administrator/teacher.view.html',
-      css: './css/style.teacher.css',
-      resolve: {
-       load: ['$ocLazyLoad', function($ocLazyLoad){
-        return $ocLazyLoad.load('./components/administrator/teacher.controller.js')
-       }]
-      },
-      controller: 'teacherController',
->>>>>>> master
     .state('reserve',{
       url: '/reserve',
       templateUrl: 'components/reservation/reserve.view.html',
@@ -177,10 +163,7 @@
       controller: 'reserveController',
       controllerAs: 'vm'
     })
-<<<<<<< HEAD
 
-=======
->>>>>>> master
     $urlRouterProvider.otherwise('/landing');
   }
 

@@ -4,8 +4,8 @@
     .module('myApp')
     .controller('adminController', adminController);
 
-    adminController.$inject = ['$scope','$location','adminService', 'userService'];
-    function adminController($scope, $location, adminService, userService){
+    adminController.$inject = ['$scope','$location','$watch','adminService', 'userService'];
+    function adminController($scope, $location, $watch, adminService, userService){
 
 
       var vm = this;

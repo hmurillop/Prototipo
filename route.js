@@ -39,9 +39,9 @@
       templateUrl: 'components/administrator/admin.view.html',
       css: './css/style.administrator.css',
       resolve: {
-       load: ['$ocLazyLoad', function($ocLazyLoad){
-        return $ocLazyLoad.load('./components/administrator/admin.controller.js')
-       }]
+        load: ['$ocLazyLoad', function($ocLazyLoad){
+         return $ocLazyLoad.load('./components/administrator/admin.controller.js')
+        }]
       },
       controller: 'adminController',
       controllerAs: 'vm'

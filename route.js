@@ -1,7 +1,7 @@
 (function(){
   'use strict';
   angular
-  .module('appRoutes', ['ui.router', 'oc.lazyLoad','ngMessages','angularCSS','ngPassword','ngFileUpload'])
+  .module('appRoutes', ['ui.router', 'oc.lazyLoad','ngMessages','angularCSS','ngPassword'])
   .config(configuration)
   configuration.$inject = ['$stateProvider','$urlRouterProvider'];
 

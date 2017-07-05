@@ -53,3 +53,6 @@ h3{
   margin-top: 1%;
 }
 
+input.ng-valid.ng-touched {
+  border-bottom: 1px solid #40C5A0;
+}

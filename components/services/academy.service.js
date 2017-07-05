@@ -15,8 +15,23 @@
     //Ingresa información a la lista de academias
     function _setAcademy(pAcademy){
       var academyList = _getAcademy();
-      academyList.push(pAcademy);
+      var position = searchAcademy(pAcademy)
+      if (position == -1) {
+        academyList.push(pAcademy);
       localStorage.setItem('lsAcademyList', JSON.stringify(academyList));
+      }
+    }
+
+    //Busca si la academia está repetida
+    function searchAcademy(pAcademy){
+      var academyList = _getAcademy();
+      var position = -1;
+      for (var i = 0; i < academyList.length; i++) {
+        if (pAcademy.name == academyList[i].name) {
+          position = i;
+        }
+      }
+      return position;
     }
     //Obtiene información de la lista de academias
     function _getAcademy(){

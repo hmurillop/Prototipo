@@ -1,11 +1,7 @@
 (function(){
   'use strict';
   angular
-<<<<<<< HEAD
   .module('appRoutes', ['ui.router', 'oc.lazyLoad','ngMessages','angularCSS','ngPassword'])
-=======
-  .module('appRoutes', ['ui.router', 'oc.lazyLoad','ngMessages','angularCSS','ngCookies','ngFileUpload'])
->>>>>>> master
   .config(configuration)
 
   configuration.$inject = ['$stateProvider','$urlRouterProvider'];
@@ -149,6 +145,8 @@
        }]
       },
       controller: 'teacherController',
+      controllerAs: 'vm'
+    })
     .state('reserve',{
       url: '/reserve',
       templateUrl: 'components/reservation/reserve.view.html',
@@ -163,26 +161,4 @@
     })
     $urlRouterProvider.otherwise('/landing');
   }
-<<<<<<< HEAD
-
-=======
-  run.$inject = ['$rootScope', '$location', '$cookies', '$http'];
- function run($rootScope, $location, $cookies, $http) {
-     // El usuario continuo logeado aun despues de refrescar la pagina
-     $rootScope.globals = $cookies.getObject('globals') || {};
-     if ($rootScope.globals.currentUser) {
-         $http.defaults.headers.common['Authorization'] = 'Basic ' + $rootScope.globals.currentUser.authdata;
-     }
-     $rootScope.$on('$locationChangeStart', function (event, next, current) {
-            // devuelve al login si entra a uno zona restrica, si no se encuentra logueado
-            var restrictedPage = $.inArray($location.path(), ['/login']) === -1;
-            var loggedIn = $rootScope.globals.currentUser;
-            if (restrictedPage && !loggedIn) {
-                $location.path('/login');
-                }
-              });
-       }
->>>>>>> master
-
-
 })();

@@ -111,6 +111,19 @@
       controllerAs: 'vm'
     })
 
+    .state('teacher',{
+      url: '/teacher',
+      templateUrl: 'components/administrator/teacher.view.html',
+      css: './css/style.teacher.css',
+      resolve: {
+       load: ['$ocLazyLoad', function($ocLazyLoad){
+        return $ocLazyLoad.load('./components/administrator/teacher.controller.js')
+       }]
+      },
+      controller: 'teacherController',
+      controllerAs: 'vm'
+    }
+
   .state('profileInst',{
       url: '/profileInst',
       templateUrl: 'components/profiles/profileInst.view.html',

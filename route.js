@@ -1,7 +1,11 @@
 (function(){
   'use strict';
   angular
+<<<<<<< HEAD
   .module('appRoutes', ['ui.router', 'oc.lazyLoad','ngMessages','angularCSS','ngPassword'])
+=======
+  .module('appRoutes', ['ui.router', 'oc.lazyLoad','ngMessages','angularCSS','ngCookies','ngFileUpload'])
+>>>>>>> master
   .config(configuration)
 
   configuration.$inject = ['$stateProvider','$urlRouterProvider'];
@@ -111,7 +115,40 @@
       controller: 'academyController',
       controllerAs: 'vm'
     })
-
+  .state('profileInst',{
+      url: '/profileInst',
+      templateUrl: 'components/profiles/profileInst.view.html',
+      css: './css/style.profile.css',
+      resolve: {
+       load: ['$ocLazyLoad', function($ocLazyLoad){
+        return $ocLazyLoad.load('./components/profiles/profileInst.controller.js')
+       }]
+      },
+      controller: 'profileInstController',
+      controllerAs: 'vm'
+    })
+  .state('profileStud',{
+      url: '/profileStud',
+      templateUrl: 'components/profiles/profileStud.view.html',
+      css: './css/style.profile.css',
+      resolve: {
+       load: ['$ocLazyLoad', function($ocLazyLoad){
+        return $ocLazyLoad.load('./components/profiles/profileStud.controller.js')
+       }]
+      },
+      controller: 'profileStudController',
+      controllerAs: 'vm'
+    })
+    .state('teacher',{
+      url: '/teacher',
+      templateUrl: 'components/administrator/teacher.view.html',
+      css: './css/style.teacher.css',
+      resolve: {
+       load: ['$ocLazyLoad', function($ocLazyLoad){
+        return $ocLazyLoad.load('./components/administrator/teacher.controller.js')
+       }]
+      },
+      controller: 'teacherController',
     .state('reserve',{
       url: '/reserve',
       templateUrl: 'components/reservation/reserve.view.html',
@@ -124,10 +161,28 @@
       controller: 'reserveController',
       controllerAs: 'vm'
     })
-
     $urlRouterProvider.otherwise('/landing');
   }
+<<<<<<< HEAD
 
+=======
+  run.$inject = ['$rootScope', '$location', '$cookies', '$http'];
+ function run($rootScope, $location, $cookies, $http) {
+     // El usuario continuo logeado aun despues de refrescar la pagina
+     $rootScope.globals = $cookies.getObject('globals') || {};
+     if ($rootScope.globals.currentUser) {
+         $http.defaults.headers.common['Authorization'] = 'Basic ' + $rootScope.globals.currentUser.authdata;
+     }
+     $rootScope.$on('$locationChangeStart', function (event, next, current) {
+            // devuelve al login si entra a uno zona restrica, si no se encuentra logueado
+            var restrictedPage = $.inArray($location.path(), ['/login']) === -1;
+            var loggedIn = $rootScope.globals.currentUser;
+            if (restrictedPage && !loggedIn) {
+                $location.path('/login');
+                }
+              });
+       }
+>>>>>>> master
 
 
 })();

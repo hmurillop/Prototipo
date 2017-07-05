@@ -4,8 +4,8 @@
     .module('myApp')
     .controller('adminController', adminController);
 
-    adminController.$inject = ['adminService', 'userService'];
-    function adminController(adminService, userService){
+    adminController.$inject = ['$scope','$location','$watch','adminService', 'userService'];
+    function adminController($scope, $location, $watch, adminService, userService){
 
 
       var vm = this;
@@ -14,6 +14,30 @@
 
       }init();
 
+       $scope.selectedIndex = 0;
+       /*Funcion para el tabs*/
+       $scope.$watch('selectedIndex', function(current, old) {
+           switch (current) {
+               case 0:
+                   $location.url("/");
+                   break;
+               case 1:
+                   $location.url("/");
+                   break;
+               case 2:
+                   $location.url("/");
+                   break;
+               case 3:
+                   $location.url("/");
+                   break;
+               case 4:
+                   $location.url("/");
+                   break;
+               case 5:
+                   $location.url("/");
+                   break;
+           }
+       });
 
     }
 })();

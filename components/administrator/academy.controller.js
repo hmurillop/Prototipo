@@ -10,20 +10,20 @@
       	vm.academies = academyService.getAcademy();
       	vm.academy = {};
       }init();
-      //Guardar nueva academia -Kaleen Li
-      vm.save = function(pNewAcademy){
-      	academyService.setAcademy(pNewAcademy);
-      	vm.academy = {};
-      	clear();
-      	init();
+
+      vm.save = function(pAcademy){
+        academyService.setAcademy(pAcademy);
+        vm.academy = {};
+        clear();
+        init();
       }
-      //Obtiene información de academias del form -Kaleen Li
+
+      //Obtiene información de academias del form
       vm.getInfo = function(pAcademy){
         vm.academy.name = pAcademy.name;
         vm.academy.adress = pAcademy.adress;
         vm.academy.phone = pAcademy.phone;
         vm.academy.manager = pAcademy.manager;
-        vm.academy.ubication = pAcademy.ubication;
         vm.academy.amountTeachers = pAcademy.amountTeachers;
         vm.academy.amountStudents = pAcademy.amountStudents;
       }
@@ -34,7 +34,6 @@
           adress: vm.academy.adress,
           phone: vm.academy.phone,
           manager: vm.academy.manager,
-          ubication: vm.academy.ubication,
           amountTeachers: vm.academy.amountTeachers,
           amountStudents: vm.academy.amountStudents
         }

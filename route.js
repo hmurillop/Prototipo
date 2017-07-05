@@ -1,8 +1,9 @@
 (function(){
   'use strict';
   angular
-  .module('appRoutes', ['ui.router', 'oc.lazyLoad','ngMessages','angularCSS','ngPassword'])
-  .config(configuration);
+  .module('appRoutes', ['ui.router', 'oc.lazyLoad','ngMessages','angularCSS','ngCookies'])
+  .config(configuration)
+  .controller('tabCtrl', tabCtrl);
 
   configuration.$inject = ['$stateProvider','$urlRouterProvider'];
 
@@ -112,10 +113,18 @@
       controllerAs: 'vm'
     })
 
+    .state('reserve',{
+      url: '/reserve',
+      templateUrl: 'components/reservation/reserve.view.html',
+      css: './css/style.reserve.css',
+      resolve: {
+       load: ['$ocLazyLoad', function($ocLazyLoad){
+        return $ocLazyLoad.load('./components/reservation/reserve.controller.js')
+       }]
+      },
+      controller: 'reserveController',
+      controllerAs: 'vm'
+    })
+
     $urlRouterProvider.otherwise('/landing');
   }
-
-
-
-
-})();

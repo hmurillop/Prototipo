@@ -5,7 +5,7 @@
 
   <form name="frmEvent" ng-submit="vm.preSave(vm.event)" novalidate autocomplete="off">
 
-    <div class="col-md-offset-2 col-md-4">
+    <div class="formLeft col-md-offset-2 col-md-4">
 
       <!-- input -->
       <div class="form-group col-xs-12 col-sm-12">
@@ -64,11 +64,10 @@
           <option value="">---Indique la género---</option>
           <option value="male">Masculino</option>
           <option value="female">Femenino</option>
-          <option value="undefined">Indefinido</option>
-          </select>
-          <div ng-messages="frmEvent.gender.$error">
-            <div ng-messages-include="components/includes/messages.html"></div>
-          </div>
+        </select>
+        <div ng-messages="frmEvent.gender.$error">
+          <div ng-messages-include="components/includes/messages.html"></div>
+        </div>
       </div>
 
       <!-- input -->
@@ -122,7 +121,7 @@
 
     </div>
 
-    <div class="col-sm-6 col-md-4">
+    <div class="formRight col-sm-7 col-md-4">
 
       <!-- input -->
       <div class="form-group col-xs-12 col-sm-12">
@@ -203,7 +202,14 @@
 
       <div class="form-group col-xs-12 col-sm-12 layout-gt-sm="row">
         <md-input-container class="md-block">
-          <label class="col-xs-3 col-sm-4 col-md-4">Image</label>
+          <label class="col-xs-3 col-sm-4 col-md-4">Logo</label>
+          <input class="col-xs-5 col-sm-4 col-md-5" type="file" id="photo" ng-model="vm.image">
+        </md-input-container>
+      </div>
+
+      <div class="form-group col-xs-12 col-sm-12 layout-gt-sm="row">
+        <md-input-container class="md-block">
+          <label class="col-xs-3 col-sm-4 col-md-4">Producto</label>
           <input class="col-xs-5 col-sm-4 col-md-5" type="file" id="photo" ng-model="vm.image">
         </md-input-container>
       </div>
@@ -211,14 +217,13 @@
     </div>
 
     <div class="col-xs-12">
-      <p class="col-md-offset-5 col-md-7">* = Datos requeridos</p>
+      <h4 class="col-md-offset-7 col-md-2">* = Datos requeridos</h4>
     </div>
 
     <div class="col-md-12">
-      <div class="col-md-7"></div>
-
+      <div class="col-md-6"></div>
       <button class="col-md-1" type="button" value="Actualizar" ng-click="vm.update(event)" id="buttonAct">Actualizar</button>
-      <button class="col-md-1" type="submit" ng-click="vm.reset()" ng-disabled="frmEvent.$invalid" id="buttonAct">Registrar</button>
+      <button class="col-md-1" type="submit" ng-click="vm.reset()" ng-disabled="frmEvent.$invalid" id="buttonReg">Registrar</button>
     </div>
 
   </form>

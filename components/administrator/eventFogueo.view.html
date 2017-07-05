@@ -1,11 +1,11 @@
 <section class="containEvent">
-<h2>REGISTRO EVENTOS FOGUEO</h2>
+<h2>REGISTRO DE EVENTOS FOGUEO</h2>
 
 <div class="row">
 
   <form name="frmEventFogueo" ng-submit="vm.save(vm.eventFogueo)" novalidate autocomplete="off">
 
-    <div class="col-md-offset-2 col-md-4">
+    <div class="formLeft col-md-offset-2 col-md-4">
 
       <!-- input -->
       <div class="form-group col-xs-12 col-sm-12">
@@ -202,15 +202,14 @@
 
     </div>
 
-    <div class="col-xs-12">
-      <p class="col-md-offset-5 col-md-7">* = Datos requeridos</p>
+     <div class="col-xs-12">
+      <h4 class="col-md-offset-7 col-md-2">* = Datos requeridos</h4>
     </div>
 
     <div class="col-md-12">
-      <div class="col-md-7"></div>
+      <div class="col-md-6"></div>
       <button class="col-md-1" type="button" value="Actualizar" ng-click="vm.update(eventFogueo)" id="buttonAct">Actualizar</button>
-      <div class="col-md-1"></div>
-      <button class="col-md-1" type="submit" ng-click="vm.reset()" ng-disabled="frmEventFogueo.$invalid" id="buttonAct">Registrar</button>
+      <button class="col-md-1" type="submit" ng-click="vm.reset()" ng-disabled="frmEventFogueo.$invalid" id="buttonReg">Registrar</button>
     </div>
 
   </form>

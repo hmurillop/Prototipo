@@ -4,7 +4,7 @@
 <div class="row">
   <form name="frmTeacher" ng-submit="vm.save(vm.teacher)" novalidate autocomplete="off">
 
-    <div class="col-md-offset-2 col-md-4">
+    <div class="formLeft col-md-offset-2 col-md-4">
 
       <!-- input -->
       <div class="form-group col-xs-12 col-sm-12">
@@ -53,7 +53,7 @@
 
     </div>
 
-    <div class="col-sm-6 col-md-4">
+    <div class="formRight col-sm-7 col-md-4">
 
       <!-- input -->
       <div class="form-group col-xs-12 col-sm-12">
@@ -94,7 +94,7 @@
       <!-- input -->
       <div class="form-group col-xs-12 col-sm-12">
         <label class="col-xs-3 col-sm-4 col-md-4">Correo electrónico</label>
-        <input class="col-xs-5 col-sm-4 col-md-5" type="text" ng-model="vm.teacher.email" name="email" required pattern="([\w_-]+\@[\w_-]+\.[\w_-]+)"> 
+        <input class="col-xs-5 col-sm-4 col-md-5" type="text" ng-model="vm.teacher.email" name="email" required pattern="([\w_-]+\@[\w_-]+\.[\w_-]+)" placeholder="paradigm287@gmail.com"> 
         <div ng-messages="frmTeacher.email.$error">
           <div ng-messages-include="components/includes/messages.html"></div>
         </div>
@@ -103,14 +103,13 @@
     </div>
 
     <div class="col-xs-12">
-      <p class="col-md-offset-6 col-md-4">* = Datos requeridos</p>
+      <h4 class="col-md-offset-7 col-md-2">* = Datos requeridos</h4>
     </div>
 
     <div class="col-sm-12 col-md-12">
-      <div class="col-sm-4 col-md-7"></div>
+      <div class="col-md-6"></div>
       <button class="col-md-1" type="button" value="Actualizar" ng-click="vm.update(teacher)" id="buttonAct">Actualizar</button>
-      <div class="col-sm-2 col-md-1"></div>
-      <button class="col-md-1" type="submit" ng-click="vm.reset()" ng-disabled="frmTeacher.$invalid" id="buttonAct">Registrar</button>
+      <button class="col-md-1" type="submit" ng-click="vm.reset()" ng-disabled="frmTeacher.$invalid" id="buttonReg">Registrar</button>
     </div>
 
   </form>

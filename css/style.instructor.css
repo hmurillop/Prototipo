@@ -13,20 +13,9 @@ h1,h2,h3,h4,h5,h6,p{
   font-size: 0.7em;
 }
 
-input.ng-invalid.ng-touched {
-  /*border-bottom: 1px solid #E7777C;*/
-}
 input.ng-valid.ng-touched {
   border-bottom: 1px solid #40C5A0;
 }
-
-input.ng-invalid.ng-touched.ng-empty{
-  /*border-bottom: 1px solid #3498db;*/
-}
-
-/*.divRegOptimo.ng-show{
-  color: #40C5A0;
-}*/
 /*estilos generales de vista*/
 
 /* estilos navigationn*/
@@ -44,7 +33,6 @@ input.ng-invalid.ng-touched.ng-empty{
   width: 100%;
   letter-spacing: 1px;
 }
-
 #optionNav {
   color: #b4b308;
   font-family: futura;
@@ -58,7 +46,6 @@ input.ng-invalid.ng-touched.ng-empty{
 .regStudent{
   margin-bottom: 80px;
 }
-
 .maxContain h2{
   font-family: robotomedium;
   letter-spacing: 3px;
@@ -68,18 +55,15 @@ input.ng-invalid.ng-touched.ng-empty{
   margin-bottom: 30px;
   padding: 0 0 20px 3%;
 }
-
 .frmInstru{
   margin: 50px;
 }
-
 .leftForm label,.rightForm label{
  text-align: left;
  font-family: futura;
  font-size: 1.1em;
  color: #525252;
 }
-
 .leftForm input,.rightForm input{
   border: none;
   border-bottom: 1px solid #b0b0b0;
@@ -109,9 +93,8 @@ input.ng-invalid.ng-touched.ng-empty{
   border: 1px solid #000000;
 }
 #leyend h4{
-  /*margin: 0;   */
   padding: 300px 10% 0 0;
-  /*margin-top: 40px;*/
+  margin-top: 40px;
   border: none;
   font-size: 1.3em;
   color: #ff0000;
@@ -140,7 +123,6 @@ input.ng-invalid.ng-touched.ng-empty{
   font-family: robotomedium;
   letter-spacing: 3px;
 }
-
 #filterAlumno{
   width: 20%;
   float: right;
@@ -149,13 +131,11 @@ input.ng-invalid.ng-touched.ng-empty{
   outline: none;
   height: 30px;
 }
-
 input::placeholder {
   padding-left: 3%;
   color: r#6e6e6eed;
   letter-spacing: 1px;
 }
-
 tbody {
   display:block;
   height:300px;
@@ -166,7 +146,6 @@ thead, tbody tr {
   width:100%;
   table-layout:fixed;
   border : none;
-
 }
 thead {
   width: calc( 100% - 1em )
@@ -174,35 +153,29 @@ thead {
 #tHead{
 border: none;
 }
-
 label{
   color: #000000;
   font-family: robotothin;
 }
-
 td{
   border-top: none;
 }
-
 th {
   font-size: 0.8em;
   font-family: robotoregular;
   text-align: center;
   border-top: none;
 }
-
 #lineTh{
  border:none;
  border-bottom: 2px solid #676767;
  width: 70%;
 }
-
 #lineTh  th{
   padding: 1%;
   border:none;
   text-align: center;
 }
-
 #lineTd td{
   padding: 1%;
   border:none;

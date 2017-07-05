@@ -26,7 +26,6 @@
         vm.eventFogueo.stateEvent = pEventFogueo.stateEvent;
         vm.eventFogueo.startDate = new Date(pEventFogueo.startDate);
         vm.eventFogueo.endDate = new Date(pEventFogueo.endDate);
-        // vm.eventFogueo.category = pEventFogueo.category;
         vm.eventFogueo.gender = pEventFogueo.gender;
         vm.eventFogueo.age = pEventFogueo.age;
         vm.eventFogueo.weight = pEventFogueo.weight;
@@ -37,6 +36,8 @@
         vm.eventFogueo.place = pEventFogueo.place;
         vm.eventFogueo.location = pEventFogueo.location;
         vm.eventFogueo.brand = pEventFogueo.brand;
+        vm.eventFogueo.business = pEventFogueo.business;
+        vm.eventFogueo.typeSponsor = pEventFogueo.typeSponsor;
         vm.eventFogueo.selectFile = pEventFogueo.selectFile;
       }
 
@@ -47,7 +48,6 @@
           stateEvent: vm.eventFogueo.stateEvent,
           startDate: vm.eventFogueo.startDate,
           endDate: vm.eventFogueo.endDate,
-          // category: vm.eventFogueo.category,
           gender: vm.eventFogueo.gender,
           age: vm.eventFogueo.age,
           weight: vm.eventFogueo.weight,
@@ -58,6 +58,8 @@
           place: vm.eventFogueo.place,
           location: vm.eventFogueo.location,
           brand: vm.eventFogueo.brand,
+          business: vm.eventFogueo.business,
+          typeSponsor: vm.eventFogueo.typeSponsor,
           selectFile: vm.eventFogueo.selectFile
         }
         eventFogueoService.updateEventFogueo(eventFogueoEdited);

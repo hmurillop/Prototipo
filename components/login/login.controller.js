@@ -1,9 +1,8 @@
 (function () {
     'use strict';
-
     angular
-        .module('myApp')
-        .controller('loginController', loginController);
+    .module('myApp')
+    .controller('loginController', loginController);
 
     loginController.$inject = ['$q','$location','AuthService','SessionService'];
 

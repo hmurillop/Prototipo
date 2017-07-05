@@ -111,6 +111,19 @@
       controllerAs: 'vm'
     })
 
+    .state('teacher',{
+      url: '/teacher',
+      templateUrl: 'components/administrator/teacher.view.html',
+      css: './css/style.teacher.css',
+      resolve: {
+       load: ['$ocLazyLoad', function($ocLazyLoad){
+        return $ocLazyLoad.load('./components/administrator/teacher.controller.js')
+       }]
+      },
+      controller: 'teacherController',
+      controllerAs: 'vm'
+    }
+
   .state('profileInst',{
       url: '/profileInst',
       templateUrl: 'components/profiles/profileInst.view.html',
@@ -146,12 +159,9 @@
        }]
       },
       controller: 'teacherController',
-<<<<<<< HEAD
-
-=======
       controllerAs: 'vm'
     })
->>>>>>> origin/Kevin
+
     .state('reserve',{
       url: '/reserve',
       templateUrl: 'components/reservation/reserve.view.html',
@@ -167,9 +177,5 @@
 
     $urlRouterProvider.otherwise('/landing');
   }
-<<<<<<< HEAD
 
-
-=======
->>>>>>> origin/Kevin
 })();

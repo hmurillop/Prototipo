@@ -113,6 +113,7 @@
       controllerAs: 'vm'
     })
 
+<<<<<<< HEAD
     .state('teacher',{
       url: '/teacher',
       templateUrl: 'components/administrator/teacher.view.html',
@@ -123,6 +124,18 @@
        }]
       },
       controller: 'teacherController',
+=======
+    .state('reserve',{
+      url: '/reserve',
+      templateUrl: 'components/reservation/reserve.view.html',
+      css: './css/style.reserve.css',
+      resolve: {
+       load: ['$ocLazyLoad', function($ocLazyLoad){
+        return $ocLazyLoad.load('./components/reservation/reserve.controller.js')
+       }]
+      },
+      controller: 'reserveController',
+>>>>>>> master
       controllerAs: 'vm'
     })
 

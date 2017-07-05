@@ -9,13 +9,8 @@
 	function userService($log,$http){
 		/*Objeto con datos quemados*/
 		var users = [
-<<<<<<< HEAD
-			{email : 'admin@paradigm.com', password : 'admin'},
-			{email : 'asist@paragigm.com', password : 'asist'}
-=======
 			{username : 'Administrador', email : 'admin@paradigm.com', password : 'admin'},
 			{username : 'Asistente', email : 'asist@paragigm.com', password : 'asist'}
->>>>>>> origin/Kevin
 		];
 
 		var publicAPI ={

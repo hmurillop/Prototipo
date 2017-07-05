@@ -122,7 +122,7 @@
       },
       controller: 'teacherController',
       controllerAs: 'vm'
-    }
+    })
 
   .state('profileInst',{
       url: '/profileInst',

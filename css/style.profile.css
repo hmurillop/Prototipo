@@ -1,0 +1,31 @@
+/* estilos navigationn*/
+.maxContain{
+  width: 100%;
+  background: #ffffff;
+  overflow: hidden;
+}
+.containNav{
+  width: 100%;
+  margin-bottom: 150px;
+  padding: 0 3%;
+}
+.containNav a{
+  width: 100%;
+  letter-spacing: 1px;
+}
+
+#optionNav {
+  color: #b4b308;
+  font-family: futura;
+}
+#optionDrop{
+  color: #000000;
+}
+/*fin estilos navigation*/
+
+/* Estilos de la foto de perfil */
+.profileImg img{
+  object-fit: cover;
+  width: 130px;
+  height: 130px;
+}

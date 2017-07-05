@@ -113,9 +113,34 @@
       controllerAs: 'vm'
     })
 
+  .state('profileInst',{
+      url: '/profileInst',
+      templateUrl: 'components/profiles/profileInst.view.html',
+      css: './css/style.profile.css',
+      resolve: {
+       load: ['$ocLazyLoad', function($ocLazyLoad){
+        return $ocLazyLoad.load('./components/profiles/profileInst.controller.js')
+       }]
+      },
+      controller: 'profileInstController',
+      controllerAs: 'vm'
+    })
+  .state('profileStud',{
+      url: '/profileStud',
+      templateUrl: 'components/profiles/profileStud.view.html',
+      css: './css/style.profile.css',
+      resolve: {
+       load: ['$ocLazyLoad', function($ocLazyLoad){
+        return $ocLazyLoad.load('./components/profiles/profileStud.controller.js')
+       }]
+      },
+      controller: 'profileStudController',
+      controllerAs: 'vm'
+    })
+
+
     $urlRouterProvider.otherwise('/landing');
   }
-
   run.$inject = ['$rootScope', '$location', '$cookies', '$http'];
  function run($rootScope, $location, $cookies, $http) {
      // El usuario continuo logeado aun despues de refrescar la pagina

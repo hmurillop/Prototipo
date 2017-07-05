@@ -1,28 +1,55 @@
-body{
+.sectAcademy{
   font-size: 16px;
   font-family: Futura, Roboto, Open Sans;
 }
 /*Estilos del form*/
-body form h2{
+.sectAcademy form h2{
   font-size: 1.5em;
   color: #000;
-  margin-bottom: 2.3%;
+  margin-top: 2%;
   margin-right: 80%;
 }
-body form label{
+h3{
+  font-size: 1.5em;
+  color: #000;
+}
+.sectAcademy form label{
   font-size: 0.875em;
   margin-bottom: 0.5%;
 }
 
-body form input{
-  margin-bottom: 4%;
+.sectAcademy form input{
+  margin: 3% 1% 0;
 }
-body form input button{
-  margin-top: 6%;
+
+.sectAcademy form .buttons h4{
+  font-size: 0.875em;
+}
+.sectAcademy form .buttons .btnReg{
+  margin-top: 3%;
+  color: #fff;
+  background: #000;
+}
+.sectAcademy form input .form-control{
+  border: none;
+  border-bottom: solid 2px #000;
 }
 
 /*Estilos del table*/
-body table thead{
-  background: #4b74c0;
-  color: #fff;
+.sectAcademy table thead{
+  color: #000;
 }
+.sectAcademy .inpLabel input{
+  outline: none;
+  border: none;
+  box-shadow: none;
+  border-bottom: 2px solid #9a9a9a;
+}
+.sectAcademy .acFilter{
+  background: #4b74c0;
+}
+
+.sectAcademy .acFilter .inpSearch{
+  margin-top: 1%;
+}
+

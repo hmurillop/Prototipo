@@ -1,36 +1,29 @@
-.containEvent{
-  font-size: 1em;
+.containTeacher{
+	font-size: 1em;
 	font-family: futura;
   background-color: #fff;
   margin-right: 0 auto;
 }
-h1,h2, h3, h4, h5, h6{
+h1, h2, h3, h4, h5, h6{
   margin: 0 auto;
 }
 h2{
-  font-size: 1.500em;
-  text-align: left;
-  font-family: robotomedium;
+	font-size: 1.500em;
+	text-align: left;
+	font-family: robotomedium;
   letter-spacing: 3px;
   border-bottom: 1px solid #000;
   width: 90%;
-  margin: 0 auto;
   margin-bottom: 30px;
   padding: 2% 0 20px 3%;
-}
-h6{
-  font-size: 1.650em;
-  text-align: left;
-  margin-bottom: 35px;
-  font-weight: bold;
 }
 /*Estilos del form*/
 form{
   text-align: center;
-  margin-top: 40px;
+  margin-top: 50px;
 }
 form label{
-  text-align: left;
+	text-align: left;
   font-size: 1.1em;
   color: #525252;
   font-family: futura;
@@ -41,8 +34,7 @@ form input{
   border-bottom: 1px solid #9a9a9a;
 }
 form select{
-  outline: none;
-  border-bottom: 1px solid #9a9a9a;
+  border-bottom: 2px solid #9a9a9a;
 	border-top: 2px;
 	border-left: 2px;
 	border-right: 2px;
@@ -50,7 +42,6 @@ form select{
   margin-bottom: 10px;
 }
 h4{
-  /*padding: 30px 0 0 0;*/
   border: none;
   font-size: 1.3em;
   color: #f06d50;
@@ -62,11 +53,11 @@ ng-messages{
   width: 50px;
 }
 .formLeft{
-  padding-left: 4.5%;
+  padding-left: 4.6%;
 }
 /*Estilos bottones*/
 #buttonAct{
-   margin: 3.5% 5% 0 4%;
+  margin: 3.5% 5% 0 4%;
 }
 #buttonReg{
   margin: 3.5% 0 0 0;
@@ -96,6 +87,11 @@ div.ng-active {
   font-size: 0.9em;
   letter-spacing: 1px;
 }
+.colorFormat{
+  color : red;
+  font-size: 0.7em;
+}
+
 input.ng-valid.ng-touched {
   border-bottom: 1px solid #40C5A0;
 }
@@ -120,7 +116,7 @@ input.ng-valid.ng-touched {
   font-family: robotomedium;
   letter-spacing: 3px;
 }
-#filterEventTor, #filterEventEx, #filterEventFog{
+#filterTeacher{
   width: 20%;
   float: right;
   border: none;

@@ -1,7 +1,7 @@
 (function(){
   'use strict';
   angular
-  .module('appRoutes', ['ui.router', 'oc.lazyLoad','ngMessages','angularCSS','ngCookies'])
+  .module('appRoutes', ['ui.router', 'oc.lazyLoad','ngMessages','angularCSS','ngCookies','ngFileUpload'])
   .config(configuration)
   .controller('tabCtrl', tabCtrl);
 
@@ -112,8 +112,6 @@
       controller: 'academyController',
       controllerAs: 'vm'
     })
-
-<<<<<<< HEAD
   .state('profileInst',{
       url: '/profileInst',
       templateUrl: 'components/profiles/profileInst.view.html',
@@ -138,8 +136,16 @@
       controller: 'profileStudController',
       controllerAs: 'vm'
     })
-
-=======
+    .state('teacher',{
+      url: '/teacher',
+      templateUrl: 'components/administrator/teacher.view.html',
+      css: './css/style.teacher.css',
+      resolve: {
+       load: ['$ocLazyLoad', function($ocLazyLoad){
+        return $ocLazyLoad.load('./components/administrator/teacher.controller.js')
+       }]
+      },
+      controller: 'teacherController',
     .state('reserve',{
       url: '/reserve',
       templateUrl: 'components/reservation/reserve.view.html',
@@ -152,8 +158,6 @@
       controller: 'reserveController',
       controllerAs: 'vm'
     })
->>>>>>> master
-
     $urlRouterProvider.otherwise('/landing');
   }
   run.$inject = ['$rootScope', '$location', '$cookies', '$http'];

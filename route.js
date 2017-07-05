@@ -1,9 +1,9 @@
 (function(){
   'use strict';
   angular
-  .module('appRoutes', ['ui.router', 'oc.lazyLoad','ngMessages','angularCSS','ngCookies','ngFileUpload'])
+
+  .module('appRoutes', ['ui.router', 'oc.lazyLoad','ngMessages','angularCSS','ngPassword'])
   .config(configuration)
-  .controller('tabCtrl', tabCtrl);
 
   configuration.$inject = ['$stateProvider','$urlRouterProvider'];
 
@@ -160,47 +160,6 @@
     })
     $urlRouterProvider.otherwise('/landing');
   }
-  run.$inject = ['$rootScope', '$location', '$cookies', '$http'];
- function run($rootScope, $location, $cookies, $http) {
-     // El usuario continuo logeado aun despues de refrescar la pagina
-     $rootScope.globals = $cookies.getObject('globals') || {};
-     if ($rootScope.globals.currentUser) {
-         $http.defaults.headers.common['Authorization'] = 'Basic ' + $rootScope.globals.currentUser.authdata;
-     }
-     $rootScope.$on('$locationChangeStart', function (event, next, current) {
-            // devuelve al login si entra a uno zona restrica, si no se encuentra logueado
-            var restrictedPage = $.inArray($location.path(), ['/login']) === -1;
-            var loggedIn = $rootScope.globals.currentUser;
-            if (restrictedPage && !loggedIn) {
-                $location.path('/login');
-                }
-              });
-       }
 
-       function tabCtrl($scope, $location, $log) {
-        $scope.selectedIndex = 0;
 
-        $scope.$watch('selectedIndex', function(current, old) {
-            switch (current) {
-                case 0:
-                    $location.url("/academy");
-                    break;
-                case 1:
-                    $location.url("/event");
-                    break;
-                case 2:
-                    $location.url("#/instructor");
-                    break;
-                case 3:
-                    $location.url("/");
-                    break;
-                case 4:
-                    $location.url("/");
-                    break;
-                case 5:
-                    $location.url("/");
-                    break;
-            }
-        });
-    }
 })();

@@ -24,7 +24,7 @@
     // Estado del administrador
     .state('admin',{
       url: '/admin',
-      templateUrl: 'components/administrator/admin.view.html',
+      templateUrl: 'components/administrator/admin/admin.view.html',
       css: './css/style.administrator.css',
       resolve: {
        load: ['$ocLazyLoad', function($ocLazyLoad){
@@ -87,6 +87,83 @@
       controllerAs: 'vm'
     })
 
+    .state('eventFogueo',{
+      url: '/eventFogueo',
+      templateUrl: 'components/administrator/fogueo/eventFogueo.view.html',
+      css: './css/style.event.css',
+      resolve: {
+       load: ['$ocLazyLoad', function($ocLazyLoad){
+        return $ocLazyLoad.load('./components/administrator/fogueo/eventFogueo.controller.js')
+       }]
+      },
+      controller: 'eventFogueoController',
+      controllerAs: 'vm'
+    })
+
+    .state('academy',{
+      url: '/academy',
+      templateUrl: 'components/administrator/academy/academy.view.html',
+      css: './css/style.academy.css',
+      resolve: {
+       load: ['$ocLazyLoad', function($ocLazyLoad){
+        return $ocLazyLoad.load('./components/administrator/academy/academy.controller.js')
+       }]
+      },
+      controller: 'academyController',
+      controllerAs: 'vm'
+    })
+
+    .state('teacher',{
+      url: '/teacher',
+      templateUrl: 'components/administrator/teacher/teacher.view.html',
+      css: './css/style.teacher.css',
+      resolve: {
+       load: ['$ocLazyLoad', function($ocLazyLoad){
+        return $ocLazyLoad.load('./components/administrator/teacher/teacher.controller.js')
+       }]
+      },
+      controller: 'teacherController',
+      controllerAs: 'vm'
+    })
+
+    .state('profileInst',{
+      url: '/profileInst',
+      templateUrl: 'components/profiles/profileInst.view.html',
+      css: './css/style.profile.css',
+      resolve: {
+        load: ['$ocLazyLoad', function($ocLazyLoad){
+          return $ocLazyLoad.load('./components/profiles/profileInst.controller.js')
+        }]
+      },
+      controller: 'profileInstController',
+      controllerAs: 'vm'
+    })
+
+    .state('profileStud',{
+      url: '/profileStud',
+      templateUrl: 'components/profiles/profileStud.view.html',
+      css: './css/style.profile.css',
+      resolve: {
+        load: ['$ocLazyLoad', function($ocLazyLoad){
+          return $ocLazyLoad.load('./components/profiles/profileStud.controller.js')
+        }]
+      },
+      controller: 'profileStudController',
+      controllerAs: 'vm'
+    })
+
+    .state('reserve',{
+      url: '/reserve',
+      templateUrl: 'components/reservation/reserve.view.html',
+      css: './css/style.reserve.css',
+      resolve: {
+       load: ['$ocLazyLoad', function($ocLazyLoad){
+        return $ocLazyLoad.load('./components/reservation/reserve.controller.js')
+       }]
+      },
+      controller: 'reserveController',
+      controllerAs: 'vm'
+    })
 
 
 

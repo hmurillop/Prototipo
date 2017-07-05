@@ -113,6 +113,7 @@
       controllerAs: 'vm'
     })
 
+<<<<<<< HEAD
   .state('profileInst',{
       url: '/profileInst',
       templateUrl: 'components/profiles/profileInst.view.html',
@@ -138,6 +139,20 @@
       controllerAs: 'vm'
     })
 
+=======
+    .state('reserve',{
+      url: '/reserve',
+      templateUrl: 'components/reservation/reserve.view.html',
+      css: './css/style.reserve.css',
+      resolve: {
+       load: ['$ocLazyLoad', function($ocLazyLoad){
+        return $ocLazyLoad.load('./components/reservation/reserve.controller.js')
+       }]
+      },
+      controller: 'reserveController',
+      controllerAs: 'vm'
+    })
+>>>>>>> master
 
     $urlRouterProvider.otherwise('/landing');
   }

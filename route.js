@@ -3,7 +3,6 @@
   angular
   .module('appRoutes', ['ui.router', 'oc.lazyLoad','ngMessages','angularCSS','ngPassword','ngFileUpload'])
   .config(configuration)
-
   configuration.$inject = ['$stateProvider','$urlRouterProvider'];
 
   function configuration($stateProvider,$urlRouterProvider){
@@ -147,12 +146,9 @@
        }]
       },
       controller: 'teacherController',
-<<<<<<< HEAD
       controllerAs: 'vm'
     })
-=======
 
->>>>>>> master
     .state('reserve',{
       url: '/reserve',
       templateUrl: 'components/reservation/reserve.view.html',
@@ -168,9 +164,5 @@
 
     $urlRouterProvider.otherwise('/landing');
   }
-<<<<<<< HEAD
-=======
 
-
->>>>>>> master
 })();

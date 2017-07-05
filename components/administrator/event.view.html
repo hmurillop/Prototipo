@@ -1,9 +1,9 @@
 <section class="containEvent">
-<h2>REGISTRAR EVENTOS EXHIBICIÓN</h2>
+<h2>REGISTRO DE EVENTOS EXHIBICIÓN</h2>
 
 <div class="row">
 
-  <form name="frmEvent" ng-submit="vm.save(vm.event)" novalidate autocomplete="off">
+  <form name="frmEvent" ng-submit="vm.preSave(vm.event)" novalidate autocomplete="off">
 
     <div class="col-md-offset-2 col-md-4">
 
@@ -216,8 +216,8 @@
 
     <div class="col-md-12">
       <div class="col-md-7"></div>
+
       <button class="col-md-1" type="button" value="Actualizar" ng-click="vm.update(event)" id="buttonAct">Actualizar</button>
-      <div class="col-md-1"></div>
       <button class="col-md-1" type="submit" ng-click="vm.reset()" ng-disabled="frmEvent.$invalid" id="buttonAct">Registrar</button>
     </div>
 
@@ -279,61 +279,10 @@
         <td>{{event.brand}}</td>
         <td>{{event.business}}</td>
         <td>{{event.typeSponsor}}</td>
-        <td>{{event.selectFile}}</td>
+        <td><img ng-src="{{event.photo}}"></td>
         <td><input type="button" value="Editar" ng-click="vm.getInfo(event)"></td>
       </tr>
     </tbody>
   </table>
+</div> 
 </div>
-</div>
-
-
-
-
-
-
-<!-- <table id="tblEvent">
-  <thead>
-    <tr>
-      <th>Nombre</th>
-      <th>Teléfono</th>
-      <th>Estado del evento</th>
-      <th>Fecha de inicio</th>
-      <th>Fecha de finalizado</th>
-      <th>Género</th>
-      <th>Edad</th>
-      <th>Peso</th>
-      <th>Invitados especiales</th>
-      <th>Organizaciones beneficas</th>
-      <th>Capacidad</th>
-      <th>Horario</th>
-      <th>Costo inscripción</th>
-      <th>Lugar</th>
-      <th>Ubicación</th>
-      <th>Nombre Patrocinador</th>
-      <th>Logo</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr ng-repeat="event in vm.events">
-      <td>{{event.name}}</td>
-      <td>{{event.phone}}</td>
-      <td>{{event.stateEvent}}</td>
-      <td>{{event.startDate | date}}</td>
-      <td>{{event.endDate | date}}</td>
-      <td>{{event.gender}}</td>
-      <td>{{event.age}}</td>
-      <td>{{event.weight}}</td>
-      <td>{{event.specialGuests}}</td>
-      <td>{{event.charities}}</td>
-      <td>{{event.capacity}}</td>
-      <td>{{event.schedule}}</td>
-      <td>{{event.costRegistration}}</td>
-      <td>{{event.place}}</td>
-      <td>{{event.location}}</td>
-      <td>{{event.brand}}</td>
-      <td>{{event.selectFile}}</td>
-      <td><input type="button" value="Editar" ng-click="vm.getInfo(event)"></td>
-    </tr>
-  </tbody>
-</table> -->

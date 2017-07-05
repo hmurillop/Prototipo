@@ -14,7 +14,8 @@ h2{
   border-bottom: 1px solid #000;
   width: 90%;
   margin-bottom: 30px;
-  margin: 0 auto;  padding: 0 0 20px 3px;
+  margin-top: 20px;
+  padding: 0 0 20px 30px;
 }
 h6{
   font-size: 1.650em;
@@ -23,6 +24,7 @@ h6{
 }
 /*Estilos del form*/
 form{
+  text-align: center;
   margin-top: 50px;
 }
 form label{
@@ -47,6 +49,7 @@ form select{
 }
 p{
   color: #f06d50;
+  font-weight: bold;
 }
 ng-messages{
   width: 50px;
@@ -58,7 +61,7 @@ ng-messages{
   background-color: #000;
   color: #fff;
   padding: 0.5% 1.5%;
-  margin: 4% 5% 0 5%;
+  margin: 4% 5% 0 0;
 }
 #buttonAct:hover, #buttonReg:hover{
   background-color: #fff;

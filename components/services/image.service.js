@@ -8,7 +8,7 @@
     var cloudObj = {
       url:'https://api.cloudinary.com/v1_1/dn2yxhyyv/image/upload',
       data:{
-        upload_preset: 'Prototipo',
+        upload_preset: 'proyecto1',
         tags:'Any',
         context:'photo=test'
       }

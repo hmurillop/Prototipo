@@ -149,8 +149,6 @@
       controllerAs: 'vm'
     })
 
-<<<<<<< HEAD
-=======
     .state('teacher',{
       url: '/teacher',
       templateUrl: 'components/administrator/teacher.view.html',
@@ -161,13 +159,9 @@
        }]
       },
       controller: 'teacherController',
-<<<<<<< HEAD
-
-=======
       controllerAs: 'vm'
     })
->>>>>>> origin/Kevin
->>>>>>> master
+
     .state('reserve',{
       url: '/reserve',
       templateUrl: 'components/reservation/reserve.view.html',
@@ -183,9 +177,5 @@
 
     $urlRouterProvider.otherwise('/landing');
   }
-<<<<<<< HEAD
 
-
-=======
->>>>>>> origin/Kevin
 })();

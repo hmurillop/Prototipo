@@ -113,7 +113,6 @@
       controllerAs: 'vm'
     })
 
-<<<<<<< HEAD
   .state('profileInst',{
       url: '/profileInst',
       templateUrl: 'components/profiles/profileInst.view.html',
@@ -139,7 +138,6 @@
       controllerAs: 'vm'
     })
 
-=======
     .state('reserve',{
       url: '/reserve',
       templateUrl: 'components/reservation/reserve.view.html',
@@ -152,7 +150,6 @@
       controller: 'reserveController',
       controllerAs: 'vm'
     })
->>>>>>> master
 
     $urlRouterProvider.otherwise('/landing');
   }

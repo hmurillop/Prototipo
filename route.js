@@ -112,6 +112,19 @@
       controllerAs: 'vm'
     })
 
+    .state('reserve',{
+      url: '/reserve',
+      templateUrl: 'components/reservation/reserve.view.html',
+      css: './css/style.reserve.css',
+      resolve: {
+       load: ['$ocLazyLoad', function($ocLazyLoad){
+        return $ocLazyLoad.load('./components/reservation/reserve.controller.js')
+       }]
+      },
+      controller: 'reserveController',
+      controllerAs: 'vm'
+    })
+
     $urlRouterProvider.otherwise('/landing');
   }
 

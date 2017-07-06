@@ -168,7 +168,7 @@
 
 
 
-    $urlRouterProvider.otherwise('/landing');
+    $urlRouterProvider.otherwise('/admin');
   }//Cierre de la function configuration
 
 })();

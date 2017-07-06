@@ -24,6 +24,7 @@
       }
 
       vm.save = function(pNewEvent){
+        
         eventService.setEvents(pNewEvent);
         vm.event = {};
         clean();

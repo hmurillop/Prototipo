@@ -22,8 +22,8 @@
       controllerAs: 'vm'
     })
     // Estado del administrador
-    .state('admin',{
-      url: '/admin',
+    .state('administrator',{
+      url: '/administrator',
       templateUrl: 'components/administrator/admin/admin.view.html',
       css: './css/style.administrator.css',
       resolve: {
@@ -164,9 +164,6 @@
       controller: 'reserveController',
       controllerAs: 'vm'
     })
-
-
-
 
     $urlRouterProvider.otherwise('/landing');
   }//Cierre de la function configuration

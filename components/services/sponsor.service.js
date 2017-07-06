@@ -9,7 +9,7 @@
     var publicAPI = {
       setSponsors : _setSponsors,
       getSponsors: _getSponsors,
-      updateSponsor : _updateSponsor
+      updateSponsor: _updateSponsor
     };
     return publicAPI;
 
@@ -28,7 +28,7 @@
     return sponsorList;
   }
 
-  function _updateEvent(pSponsorModified){
+  function _updateSponsor(pSponsorModified){
       var sponsorList = _getSponsors();
       for(var i = 0; i < sponsorList.length; i++){
         if(sponsorList[i].name === pSponsorModified.name){

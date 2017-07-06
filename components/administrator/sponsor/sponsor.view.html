@@ -3,7 +3,7 @@
 
 <div class="row">
 
-  <form name="frmSponsor" ng-submit="vm.preSave(vm.sponsor)" novalidate autocomplete="off">
+  <form name="frmSponsor" ng-submit="vm.save(vm.sponsor)" novalidate autocomplete="off">
 
     <div class="formLeft col-md-offset-2 col-md-4">
 
@@ -25,14 +25,6 @@
           <option value="equipo">Equipo</option>
           <option value="alimentación">Alimentación</option>
         </select>
-          <div ng-messages-include="components/includes/messages.html"></div>
-      </div>
-
-      <div class="form-group col-xs-12 col-sm-12" layout-gt-sm="row">
-        <md-input-container class="md-block">
-          <label class="col-xs-3 col-sm-4 col-md-4">Logo</label>
-          <input class="col-xs-5 col-sm-4 col-md-5" type="file" ng-model="vm.photo" name="photo" id="photo" >
-        </md-input-container>
       </div>
 
       <!-- input -->
@@ -45,16 +37,15 @@
         </select>
       </div>
 
+    </div>
+
+    <div class="formRight col-sm-7 col-md-4">
 
       <!-- input -->
       <div class="form-group col-xs-12 col-sm-12">
         <label class="col-xs-3 col-sm-4 col-md-4">Productos de alimentación</label>
         <input class="col-xs-5 col-sm-4 col-md-5" type="text" ng-model="vm.sponsor.foodProducts" name="foodProducts">
       </div>
-
-    </div>
-
-    <div class="formRight col-sm-7 col-md-4">
 
       <!-- input -->
       <div class="form-group col-xs-12 col-sm-12">
@@ -81,12 +72,12 @@
       </div>
 
       <!-- input -->
-      <div class="form-group col-xs-12 col-sm-12" layout-gt-sm="row">
+<!--       <div class="form-group col-xs-12 col-sm-12" layout-gt-sm="row">
         <md-input-container class="md-block">
           <label class="col-xs-3 col-sm-4 col-md-4">Producto de patrocinio</label>
           <input class="col-xs-5 col-sm-4 col-md-5" type="file" ng-model="vm.sponsor.photo" name="photo" id="photo" >
         </md-input-container>
-      </div>
+      </div> -->
 
     </div>
 
@@ -109,7 +100,7 @@
 
 <div class="container contTable">
   <div class="row panelTable">
-    <h3>EVENTOS DE EXHIBICION</h3>
+    <h3>PATROCINADPRES</h3>
     <input id="filterSponsor" type="search" name="nameFilter" ng-model="vm.nameFilter" placeholder="Buscar">
   </div>
 
@@ -118,29 +109,28 @@
       <tr id="lineTh">
         <th>Nombre</th>
         <th>Tipo de patrocinador</th>
-        <th>Logo</th>
         <th>Tipo de moneda</th>
         <th>Productos de alimentación</th>
         <th>Cantidad productos de alimentación</th>
         <th>Equivalencia de los productos de alimentación</th>
         <th>Cuáles equipos fue patrocinado</th>
         <th>Cantidad equipos fue patrocinado</th>
-        <th>Producto de patrocinio</th>
+<!--         <th>Producto de patrocinio</th> -->
+        <th></th>
       </tr>
     </thead>
     <tbody>
       <tr id="lineTd" ng-repeat="sponsor in vm.sponsors | filter:vm.nameFilter">
         <td>{{sponsor.name}}</td>
         <td>{{sponsor.typeSponsor}}</td>
-        <td>{{sponsor.photo}}</td>
+<!--         <td>{{sponsor.photo}}</td> -->
         <td>{{sponsor.typeCoin}}</td>
         <td>{{sponsor.foodProducts}}</td>
         <td>{{sponsor.quantityFood}}</td>
         <td>{{sponsor.equivalenceFood}}</td>
         <td>{{sponsor.equipment}}</td>
         <td>{{sponsor.quantityEquipment}}</td>
-        <td>{{sponsor.photo}}</td>
-        <td><img ng-src="{{sponsor.photo}}" alt="Description" width="40px" height="60px" /></td>
+<!--          <td>{{sponsor.photo}}</td> -->
         <td><input type="button" value="Editar" ng-click="vm.getInfo(sponsor)"></td>
       </tr>
     </tbody>

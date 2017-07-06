@@ -168,44 +168,6 @@
         </div>
       </div>
 
-      <!-- input -->
-      <div class="col-md-12">
-          <h6 class="col-md-4">Patrocinador</h6>
-      </div>
-
-      <!-- input -->
-      <div class="form-group col-xs-12 col-sm-12">
-        <label class="col-xs-3 col-sm-4 col-md-4">Marca</label>
-        <input class="col-xs-5 col-sm-4 col-md-5" type="type" ng-model="vm.event.brand" name="brand" required>
-        <div ng-messages="frmEvent.brand.$error">
-          <div ng-messages-include="components/includes/messages.html"></div>
-        </div>
-      </div>
-
-      <!-- input -->
-      <div class="form-group col-xs-12 col-sm-12">
-        <label class="col-xs-3 col-sm-4 col-md-4">Empresa</label>
-        <input class="col-xs-5 col-sm-4 col-md-5" type="type" ng-model="vm.event.business" name="business" required>
-        <div ng-messages="frmEvent.business.$error">
-          <div ng-messages-include="components/includes/messages.html"></div>
-        </div>
-      </div>
-
-      <!-- input -->
-      <div class="form-group col-xs-12 col-sm-12">
-        <label class="col-xs-3 col-sm-4 col-md-4">Tipo de patrocinador</label>
-        <input class="col-xs-5 col-sm-4 col-md-5" type="type" ng-model="vm.event.typeSponsor" name="typeSponsor" required>
-            <div ng-messages-include="components/includes/messages.html"></div>
-        </div>
-      </div>
-
-      <div class="form-group col-xs-12 col-sm-12" layout-gt-sm="row">
-        <md-input-container class="md-block">
-          <label class="col-xs-3 col-sm-4 col-md-4">Producto</label>
-          <input class="col-xs-5 col-sm-4 col-md-5" type="file" ng-model="vm.photo" name="photo" id="photo" >
-        </md-input-container>
-      </div>
-
     </div>
 
     <div class="col-xs-12">
@@ -249,10 +211,6 @@
         <th>Costo inscripción</th>
         <th>Lugar</th>
         <th>Ubicación</th>
-        <th>Marca</th>
-        <th>Empresa</th>
-        <th>Tipo de patrocinador</th>
-        <th>Logo</th>
         <th></th>
       </tr>
     </thead>
@@ -273,10 +231,6 @@
         <td>{{event.costRegistration}}</td>
         <td>{{event.place}}</td>
         <td>{{event.location}}</td>
-        <td>{{event.brand}}</td>
-        <td>{{event.business}}</td>
-        <td>{{event.typeSponsor}}</td>
-        <td><img ng-src="{{event.photo}}" alt="Description" width="40px" height="60px" /></td>
         <td><input type="button" value="Editar" ng-click="vm.getInfo(event)"></td>
       </tr>
     </tbody>

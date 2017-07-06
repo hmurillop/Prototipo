@@ -63,10 +63,9 @@
           <option value="">---Indique la género---</option>
           <option value="Masculino">Masculino</option>
           <option value="Femenino">Femenino</option>
-          <option value="Indefinido">Indefinido</option>
-          </select>
-          <div ng-messages="frmEvenTorneo.gender.$error"><div ng-messages-include="components/includes/messages.html"></div>
-          </div>
+        </select>
+        <div ng-messages="frmEvenTorneo.gender.$error"><div ng-messages-include="components/includes/messages.html"></div>
+        </div>
       </div>
 
       <!-- input -->
@@ -158,47 +157,6 @@
         </div>
       </div>
 
-      <!-- input -->
-      <div class="col-xs-12 col-sm-12">
-        <h6 class="col-md-4">Patrocinador</h6>
-      </div>
-
-      <!-- input -->
-      <div class="form-group col-xs-12 col-sm-12">
-        <label class="col-xs-3 col-sm-4 col-md-4">Marca</label>
-        <input class="col-xs-5 col-sm-4 col-md-5" type="type" ng-model="vm.eventTorneo.brand" name="brand" required>
-        <div ng-messages="frmEvenTorneo.brand.$error">
-          <div ng-messages-include="components/includes/messages.html"></div>
-        </div>
-      </div>
-
-      <!-- input -->
-      <div class="form-group col-xs-12 col-sm-12">
-        <label class="col-xs-3 col-sm-4 col-md-4">Empresa</label>
-        <input class="col-xs-5 col-sm-4 col-md-5" type="type" ng-model="vm.eventTorneo.business" name="business" required>
-        <div ng-messages="frmEvenTorneo.business.$error">
-          <div ng-messages-include="components/includes/messages.html"></div>
-        </div>
-      </div>
-
-      <!-- input -->
-      <div class="form-group col-xs-12 col-sm-12">
-        <label class="col-xs-3 col-sm-4 col-md-4">Tipo de patrocinador</label>
-        <input class="col-xs-5 col-sm-4 col-md-5" type="type" ng-model="vm.eventTorneo.typeSponsor" name="typeSponsor" required>
-        <div ng-messages="frmEvenTorneo.typeSponsor.$error">
-          <div ng-messages-include="components/includes/messages.html"></div>
-        </div>
-      </div>
-
-      <!-- input -->
-      <div class="form-group col-xs-12 col-sm-12">
-        <label class="col-xs-3 col-sm-4 col-md-4">Seleccione un archivo (Logo)</label>
-        <input class="col-xs-5 col-sm-4 col-md-5" type="type" ng-model="vm.eventTorneo.selectFile" name="selectFile" required>
-        <div ng-messages="frmEvenTorneo.selectFile.$error">
-          <div ng-messages-include="components/includes/messages.html"></div>
-        </div>
-      </div>
-
     </div>
 
     <div class="col-xs-12">
@@ -240,10 +198,6 @@
         <th>Costo inscripción</th>
         <th>Lugar</th>
         <th>Ubicación</th>
-        <th>Marca</th>
-        <th>Empresa</th>
-        <th>Tipo de patrocinador</th>
-        <th>Logo</th>
         <th></th>
       </tr>
     </thead>
@@ -263,10 +217,6 @@
         <td>{{eventTorneo.costRegistration}}</td>
         <td>{{eventTorneo.place}}</td>
         <td>{{eventTorneo.location}}</td>
-        <td>{{eventTorneo.brand}}</td>
-        <td>{{eventTorneo.business}}</td>
-        <td>{{eventTorneo.typeSponsor}}</td>
-        <td>{{eventTorneo.selectFile}}</td>
         <td><input type="button" value="Editar" ng-click="vm.getInfo(eventTorneo)"></td>
       </tr>
     </tbody>

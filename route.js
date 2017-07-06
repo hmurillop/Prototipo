@@ -48,8 +48,8 @@
       controllerAs: 'vm'
     })
     // Estado del evento
-    .state('administrator.event',{
-      url: '/administrator/event',
+    .state('event',{
+      url: '/event',
       templateUrl: 'components/administrator/event/event.view.html',
       css: './css/style.event.css',
       resolve: {
@@ -163,8 +163,7 @@
        }]
       },
       controller: 'adminController',
-      controllerAs: 'vm',
-      view: 
+      controllerAs: 'vm'
     })
 
     $urlRouterProvider.otherwise('/landing');

@@ -3,36 +3,75 @@
   font-family: Futura, Roboto, Open Sans;
 }
 /*Estilos del form*/
-.sectAcademy form h2{
-  font-size: 1.5em;
-  color: #000;
-  margin-top: 2%;
-  margin-right: 80%;
+
+h2{
+  font-size: 1.500em;
+  text-align: left;
+  font-family: robotomedium;
+  letter-spacing: 3px;
+  border-bottom: 1px solid #000;
+  width: 90%;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  padding: 2% 0 20px 3%;
 }
-h3{
-  font-size: 1.5em;
-  color: #000;
+
+.sectAcademy form{
+   text-align: center;
+   margin-top: 40px;
+
 }
 .sectAcademy form label{
-  font-size: 0.875em;
-  margin-bottom: 0.5%;
+  text-align: left;
+  font-size: 1.1em;
+  color: #525252;
+  font-family: futura;
 }
 
 .sectAcademy form input{
-  margin: 3% 1% 0;
+  outline: none;
+  border: 0px;
+  border-bottom: 1px solid #9a9a9a;
 }
 
+/* Estilos botones */
 .sectAcademy form .buttons h4{
   font-size: 0.875em;
 }
 .sectAcademy form .buttons .btnReg{
-  margin-top: 3%;
+
   color: #fff;
   background: #000;
+  border-style: 1px solid #000;
+  text-align: center;
+  border: none;
+  transition: 1s;
+  font-family: futura;
+  padding: 0.5% 1.5%;
 }
-.sectAcademy form input .form-control{
+.sectAcademy form .buttons .btnReg:hover{
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #000;
+  transition: 1s;
+}
+.sectAcademy form input .form-group .form-control{ /**/
   border: none;
   border-bottom: solid 2px #000;
+}
+
+/*Estilos de validaciones*/
+input.ng-valid.ng-touched {
+  border-bottom: 1px solid #40C5A0;
+}
+
+div.ng-active {
+  text-align: left;
+  padding-left: 2%;
+  color: #f06d50;
+  margin: 0 0 20px 0;
+  font-size: 0.9em;
+  letter-spacing: 1px;
 }
 
 /*Estilos del table*/
@@ -53,6 +92,3 @@ h3{
   margin-top: 1%;
 }
 
-input.ng-valid.ng-touched {
-  border-bottom: 1px solid #40C5A0;
-}

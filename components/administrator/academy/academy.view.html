@@ -4,7 +4,7 @@
 		<form name="frmRegAcademy" ng-submit="vm.save(vm.academy)" autocomplete="off">
 			<h2>Registrar academias</h2>
 
-		<di3v class="formLeft col-md-offset-2 col-md-4">
+		<div class="formLeft col-md-offset-2 col-md-4">
 				
 			<!-- input -->	
 			<div class="form-group col-xs-12 col-sm-12">
@@ -30,9 +30,8 @@
 		          <div ng-messages-include="components/includes/messages.html"></div>
 	        	</div>
 	        </div>
-		</div>
 		
-		<div class="formLeft col-md-offset-2 col-md-4">
+		
 				<!-- input -->	
 				<div class="form-group col-xs-12 col-sm-12">
 			        <label class="col-xs-3 col-sm-4 col-md-4">Encargado*</label>
@@ -59,10 +58,10 @@
 		        </div>
 			</div>
 				
-				<div class="col-ms-6 col-md-9 col-lg-9 buttons">
+				<div class="col-md-10 buttons">
 				<h4>* = datos requeridos</h4>
 					<button class="btn btn-primary btnReg" type="submit" ng-click="vm.clear()" ng-disable="frmRegAcademy.$invalid">Registrar</button>
-					<input class="btn" type="button" value="Actualizar" ng-click="vm.modifyAcademy(academy)">
+					<input class="btn inpMod" type="button" value="Actualizar" ng-click="vm.modifyAcademy(academy)">
 				</div>
 		</form>
 	</div>

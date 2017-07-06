@@ -21,11 +21,37 @@
 #optionDrop{
   color: #000000;
 }
-/*fin estilos navigation*/
 
 /* Estilos de la foto de perfil */
 .profileImg img{
   object-fit: cover;
   width: 130px;
   height: 130px;
+}
+
+/* Estilos del perfil */
+.toppad{
+  outline: 
+}
+.toppad .panel-heading{
+  background: #c0392b;
+}
+
+.toppad .panel-body{
+  background: #ecf0f1;
+}
+
+.panel .panel-heading .panel-title{
+  color: #fff;
+}
+.btnEdit a{
+  background: #c0392b;
+  border: none;
+  outline: none;
+}
+.btnEdit a:hover{
+  background: #fff;
+  border: 1px solid #c0392b;;
+  outline: none;
+  color: #c0392b;
 }

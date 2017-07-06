@@ -21,19 +21,6 @@
       controller: 'landingController',
       controllerAs: 'vm'
     })
-    // Estado del administrador
-    .state('administrator',{
-      url: '/administrator',
-      templateUrl: 'components/administrator/admin/admin.view.html',
-      css: './css/style.administrator.css',
-      resolve: {
-       load: ['$ocLazyLoad', function($ocLazyLoad){
-        return $ocLazyLoad.load('./components/administrator/admin/admin.controller.js')
-       }]
-      },
-      controller: 'adminController',
-      controllerAs: 'vm'
-    })
     // Estado de registro de alumnos
     .state('instructor',{
       url: '/instructor',
@@ -61,8 +48,8 @@
       controllerAs: 'vm'
     })
     // Estado del evento
-    .state('event',{
-      url: '/event',
+    .state('administrator.event',{
+      url: '/administrator/event',
       templateUrl: 'components/administrator/event/event.view.html',
       css: './css/style.event.css',
       resolve: {
@@ -163,6 +150,21 @@
       },
       controller: 'reserveController',
       controllerAs: 'vm'
+    })
+
+    // Estado del administrador
+    .state('administrator',{
+      url: '/administrator',
+      templateUrl: 'components/administrator/admin/admin.view.html',
+      css: './css/style.administrator.css',
+      resolve: {
+       load: ['$ocLazyLoad', function($ocLazyLoad){
+        return $ocLazyLoad.load('./components/administrator/admin/admin.controller.js')
+       }]
+      },
+      controller: 'adminController',
+      controllerAs: 'vm',
+      view: 
     })
 
     $urlRouterProvider.otherwise('/landing');

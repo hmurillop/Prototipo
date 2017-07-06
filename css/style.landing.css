@@ -1,0 +1,121 @@
+/*estilos generales*/
+h1,h2,h3,h4,h5,h6,p{
+  margin: 0;
+}
+input{
+  outline: none;
+  outline:0px;
+
+}
+/*fin  estilos generales*/
+
+/*estilos navegacion*/
+#contNav{
+  background: #34537e;
+  border: none;
+  border-radius: 0;
+  margin: 0;
+}
+#contNav input{
+  background: transparent;
+  border: 1px solid #c2c2c2;
+  color : #ffffff;
+  border-radius: 5px;
+  outline: none
+
+}
+#contNav a {
+  color : #ffffff;
+  font-family: futura;
+  font-size: 1.2em;
+}
+#contNav a:hover {
+  color : #aaaaaa;
+  transition: 0.5s;
+}
+/*fin estilos navegacion*/
+
+/*estilos reserve*/
+.reserve{
+  background: url("../img/reserve.jpg");
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  filter: contrast(100px);
+}
+.reserve a{
+  background: #e44e4e;
+  color:#ffffff;
+  padding: 1% 2%;
+  border-radius: 5px;
+  border: none;
+  margin: 0 auto;
+}
+.reserveText{
+  margin: 0 auto;
+  text-align: center;
+}
+.reserveText h2{
+  color: #ffffff;
+  font-size: robotomedium;
+  padding-top: 200px;
+  letter-spacing: 4px;
+  margin-bottom: 20px;
+}
+.reserveText h3{
+  color: #ffffff;
+  font-family: futura;
+  letter-spacing: 2px;
+}
+/*fin estilos reserve*/
+
+/*estilos aboutAs*/
+.aboutAs{
+  text-align: center;
+  padding: 12% 5%;
+}
+.aboutAs h2{
+  margin-bottom: 40px;
+  font-family:robotobold;
+  font-size: 3em;
+  letter-spacing: 3px;
+
+}
+.aboutAs p{
+  font-family: futura;
+  letter-spacing: 2px;
+  text-align: justify;
+  font-size: 1.5em;
+}
+/*estilos aboutAs*/
+
+
+/*estilos podios*/
+.rankingPodio h2{
+}
+.podios {
+  margin
+}
+.contPodio1{
+
+}
+
+
+
+
+.podio1{
+  height: 50px;
+  width: 50px;
+  background: #000000;
+}
+.podio2{
+  height: 50px;
+  width: 50px;
+  background: #ff0000;
+}
+.podio3{
+  height: 50px;
+  width: 50px;
+  background: #00ff66;
+}
+/*fin estilos podios*/

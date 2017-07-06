@@ -7,9 +7,7 @@
     adminController.$inject = ['$scope','$location','adminService', 'userService'];
     function adminController($scope, $location, adminService, userService){
 
-
       var vm = this;
-
       $scope.selectedIndex = 0;
           $scope.$watch('selectedIndex', function(current, old) {
               switch (current) {

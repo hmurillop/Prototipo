@@ -87,7 +87,20 @@
       controllerAs: 'vm'
     })
 
-    .state('eventFogueo',{
+    .state('sponsor',{
+      url: '/sponsor',
+      templateUrl: 'components/administrator/sponsor/sponsor.view.html',
+      css: './css/style.event.css',
+      resolve: {
+       load: ['$ocLazyLoad', function($ocLazyLoad) {
+        return $ocLazyLoad.load('./components/administrator/sponsor/sponsor.controller.js')
+       }]
+      },
+      controller: 'sponsorController',
+      controllerAs: 'vm'
+    })
+
+        .state('eventFogueo',{
       url: '/eventFogueo',
       templateUrl: 'components/administrator/fogueo/eventFogueo.view.html',
       css: './css/style.event.css',

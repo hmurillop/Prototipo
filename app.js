@@ -1,6 +1,6 @@
 (function(){
   angular
-  .module('myApp',['appRoutes', 'ngMaterial', 'LocalStorageModule'])
+  .module('myApp',['appRoutes', 'ngMaterial', 'LocalStorageModule','ngFileUpload'])
   .config(function($mdThemingProvider) {
   		$mdThemingProvider.theme('default')
     		.primaryPalette('indigo')

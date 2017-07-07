@@ -36,10 +36,6 @@
         vm.eventTorneo.costRegistration = pEventTorneo.costRegistration;
         vm.eventTorneo.place = pEventTorneo.place;
         vm.eventTorneo.location = pEventTorneo.location;
-        vm.eventTorneo.brand = pEventTorneo.brand;
-        vm.eventTorneo.business = pEventTorneo.business;
-        vm.eventTorneo.typeSponsor = pEventTorneo.typeSponsor;
-        vm.eventTorneo.selectFile = pEventTorneo.selectFile;
       }
 
       vm.update = function(){
@@ -58,11 +54,7 @@
           schedule: vm.eventTorneo.schedule,
           costRegistration: vm.eventTorneo.costRegistration,
           place: vm.eventTorneo.place,
-          location: vm.eventTorneo.location,
-          brand: vm.eventTorneo.brand,
-          business: vm.eventTorneo.business,
-          typeSponsor: vm.eventTorneo.typeSponsor,
-          selectFile: vm.eventTorneo.selectFile
+          location: vm.eventTorneo.location
         }
         eventTorneoService.updateEventTorneo(eventTorneoEdited);
         clean();

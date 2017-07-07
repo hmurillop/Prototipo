@@ -63,7 +63,6 @@
           <option value="">---Indique la género---</option>
           <option value="male">Masculino</option>
           <option value="female">Femenino</option>
-          <option value="undefined">Indefinido</option>
           </select>
         <div ng-messages="frmEventFogueo.gender.$error">
           <div ng-messages-include="components/includes/messages.html"></div>
@@ -108,6 +107,12 @@
         <div ng-messages="frmEventFogueo.charities.$error">
           <div ng-messages-include="components/includes/messages.html"></div>
         </div>
+      </div>
+
+      <!-- input -->
+      <div class="form-group col-xs-12 col-sm-12">
+        <label class="col-xs-3 col-sm-4 col-md-4">Patrocinador</label>
+        <input class="col-xs-5 col-sm-4 col-md-5" type="text" ng-model="vm.eventFogueo.sponsor" name="sponsor">
       </div>
 
     </div>
@@ -159,47 +164,6 @@
         </div>
       </div>
 
-      <!-- input -->
-      <div class="col-xs-12 col-sm-12">
-        <h6 class="col-md-4">Patrocinador</h6>
-      </div>
-
-      <!-- input -->
-      <div class="form-group col-xs-12 col-sm-12">
-        <label class="col-xs-3 col-sm-4 col-md-4">Marca</label>
-        <input class="col-xs-5 col-sm-4 col-md-5" type="type" ng-model="vm.eventFogueo.brand" name="brand" required>
-        <div ng-messages="frmEventFogueo.brand.$error">
-          <div ng-messages-include="components/includes/messages.html"></div>
-        </div>
-      </div>
-
-      <!-- input -->
-      <div class="form-group col-xs-12 col-sm-12">
-        <label class="col-xs-3 col-sm-4 col-md-4">Empresa</label>
-        <input class="col-xs-5 col-sm-4 col-md-5" type="type" ng-model="vm.eventFogueo.business" name="business" required>
-        <div ng-messages="frmEventFogueo.business.$error">
-          <div ng-messages-include="components/includes/messages.html"></div>
-        </div>
-      </div>
-
-      <!-- input -->
-      <div class="form-group col-xs-12 col-sm-12">
-        <label class="col-xs-3 col-sm-4 col-md-4">Tipo de patrocinador</label>
-        <input class="col-xs-5 col-sm-4 col-md-5" type="type" ng-model="vm.eventFogueo.typeSponsor" name="typeSponsor" required>
-        <div ng-messages="frmEventFogueo.typeSponsor.$error">
-          <div ng-messages-include="components/includes/messages.html"></div>
-        </div>
-      </div>
-
-      <!-- input -->
-      <div class="form-group col-xs-12 col-sm-12">
-        <label class="col-xs-3 col-sm-4 col-md-4">Seleccione un archivo (Logo)</label>
-        <input class="col-xs-5 col-sm-4 col-md-5" type="type" ng-model="vm.eventFogueo.selectFile" name="selectFile" required>
-        <div ng-messages="frmEventFogueo.selectFile.$error">
-          <div ng-messages-include="components/includes/messages.html"></div>
-        </div>
-      </div>
-
     </div>
 
      <div class="col-xs-12">
@@ -235,15 +199,12 @@
         <th>Edad</th>
         <th>Peso</th>
         <th>Organizaciones beneficas</th>
+        <th>Patrocinador</th>
         <th>Capacidad</th>
         <th>Horario</th>
         <th>Costo inscripción</th>
         <th>Lugar</th>
         <th>Ubicación</th>
-        <th>Marca</th>
-        <th>Empresa</th>
-        <th>Tipo de patrocinador</th>
-        <th>Logo</th>
         <th></th>
       </tr>
     </thead>
@@ -258,15 +219,12 @@
         <td>{{eventFogueo.age}}</td>
         <td>{{eventFogueo.weight}}</td>
         <td>{{eventFogueo.charities}}</td>
+        <td>{{eventFogueo.sponsor}}</td>
         <td>{{eventFogueo.capacity}}</td>
         <td>{{eventFogueo.schedule}}</td>
         <td>{{eventFogueo.costRegistration}}</td>
         <td>{{eventFogueo.place}}</td>
         <td>{{eventFogueo.location}}</td>
-        <td>{{eventFogueo.brand}}</td>
-        <td>{{eventFogueo.business}}</td>
-        <td>{{eventFogueo.typeSponsor}}</td>
-        <td>{{eventFogueo.selectFile}}</td>
         <td><input type="button" value="Editar" ng-click="vm.getInfo(eventFogueo)"></td>
       </tr>
     </tbody>

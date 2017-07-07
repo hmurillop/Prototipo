@@ -31,14 +31,11 @@
         vm.eventFogueo.weight = pEventFogueo.weight;
         vm.eventFogueo.charities = pEventFogueo.charities;
         vm.eventFogueo.capacity = pEventFogueo.capacity;
+        vm.eventFogueo.sponsor = pEventFogueo.sponsor;
         vm.eventFogueo.schedule = pEventFogueo.schedule;
         vm.eventFogueo.costRegistration = pEventFogueo.costRegistration;
         vm.eventFogueo.place = pEventFogueo.place;
         vm.eventFogueo.location = pEventFogueo.location;
-        vm.eventFogueo.brand = pEventFogueo.brand;
-        vm.eventFogueo.business = pEventFogueo.business;
-        vm.eventFogueo.typeSponsor = pEventFogueo.typeSponsor;
-        vm.eventFogueo.selectFile = pEventFogueo.selectFile;
       }
 
       vm.update = function(){
@@ -52,15 +49,12 @@
           age: vm.eventFogueo.age,
           weight: vm.eventFogueo.weight,
           charities: vm.eventFogueo.charities,
-          capacity: vm.eventFogueo.capacity,
+          charities: vm.eventFogueo.charities,
+          sponsor: vm.eventFogueo.sponsor,
           schedule: vm.eventFogueo.schedule,
           costRegistration: vm.eventFogueo.costRegistration,
           place: vm.eventFogueo.place,
-          location: vm.eventFogueo.location,
-          brand: vm.eventFogueo.brand,
-          business: vm.eventFogueo.business,
-          typeSponsor: vm.eventFogueo.typeSponsor,
-          selectFile: vm.eventFogueo.selectFile
+          location: vm.eventFogueo.location
         }
         eventFogueoService.updateEventFogueo(eventFogueoEdited);
         clean();

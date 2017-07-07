@@ -26,6 +26,7 @@
         vm.teacher.secondName = pTeacher.secondName;
         vm.teacher.surName = pTeacher.surName;
         vm.teacher.secondSurName = pTeacher.secondSurName;
+        vm.teacher.genre = pTeacher.genre;
         vm.teacher.birthDate = pTeacher.birthDate;
         vm.teacher.address = pTeacher.address;
         vm.teacher.civilStatus = pTeacher.civilStatus;
@@ -40,11 +41,13 @@
           secondName: vm.teacher.secondName,
           surName: vm.teacher.surName,
           secondSurName: vm.teacher.secondSurName,
+          genre: vm.teacher.genre,
           birthDate: vm.teacher.birthDate,
           address: vm.teacher.address,
           civilStatus: vm.teacher.civilStatus,
           phone: vm.teacher.phone,
-          email: vm.teacher.email
+          email: vm.teacher.email,
+          academyBelongs: vm.teacher.academyBelongs
         }
         teacherService.updateTeacher(teacherEdited);
         clean();

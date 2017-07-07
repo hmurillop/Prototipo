@@ -3,7 +3,7 @@
 
 <div class="row">
 
-  <form name="frmSponsor" ng-submit="vm.save(vm.sponsor)" novalidate autocomplete="off">
+  <form name="frmSponsor" ng-submit="vm.presave(vm.sponsor)" novalidate autocomplete="off">
 
     <div class="formLeft col-md-offset-2 col-md-4">
 
@@ -70,14 +70,11 @@
         <label class="col-xs-3 col-sm-4 col-md-4">Cantidad equipos fue patrocinado</label>
         <input class="col-xs-5 col-sm-4 col-md-5" type="text" ng-model="vm.sponsor.quantityEquipment" name="costRegistration">
       </div>
-
-      <!-- input -->
-<!--       <div class="form-group col-xs-12 col-sm-12" layout-gt-sm="row">
-        <md-input-container class="md-block">
-          <label class="col-xs-3 col-sm-4 col-md-4">Producto de patrocinio</label>
-          <input class="col-xs-5 col-sm-4 col-md-5" type="file" ng-model="vm.sponsor.photo" name="photo" id="photo" >
-        </md-input-container>
-      </div> -->
+    
+      <div>
+        <label>Photo</label>
+        <input type="file" ng-model="vm.sponsor.photo" name="photo" id="photo">
+      </div>
 
     </div>
 
@@ -115,7 +112,7 @@
         <th>Equivalencia de los productos de alimentación</th>
         <th>Cuáles equipos fue patrocinado</th>
         <th>Cantidad equipos fue patrocinado</th>
-<!--         <th>Producto de patrocinio</th> -->
+        <th>Producto de patrocinio</th>
         <th></th>
       </tr>
     </thead>
@@ -130,7 +127,7 @@
         <td>{{sponsor.equivalenceFood}}</td>
         <td>{{sponsor.equipment}}</td>
         <td>{{sponsor.quantityEquipment}}</td>
-<!--          <td>{{sponsor.photo}}</td> -->
+        <td><img ng-src="{{user.photo}}" alt="Description" width="40px" height="60px" /></td>
         <td><input type="button" value="Editar" ng-click="vm.getInfo(sponsor)"></td>
       </tr>
     </tbody>

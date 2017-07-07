@@ -15,12 +15,12 @@
           <ul class="dropdown nav navbar-nav navbar-right">
             <li class="active"><a href="" class="glyphicon glyphicon-bell"></a></li>
             <li class="dropdown">
-              <a id="optionNav" href="" class="dropdown-toggle" data-toggle="dropdown">Bienvenido, {{vm.}}<b class="caret"></b></a>
+              <a id="optionNav" href="" class="dropdown-toggle" data-toggle="dropdown" ng-model="vm.teacher.name">Bienvenido, {{vm.teacher.name}} ></span><b class="caret"></b></a>
               <ul class="dropdown-menu">
-                <li><a>Inicio</a></li>
-                <li><a>Mi perfil</a></li>
-                <li><a>Registrar</a></li>
-                <li><a>Cerrar sesión</a></li>
+                <li><a href="#!/landing">Inicio</a></li>
+                <li><a href="#!/profileInst">Mi perfil</a></li>
+                <li><a href="#!/instructor">Registrar</a></li>
+                <li><a>Cerrar sesión</a></li> <!-- Falta href -->
               </ul>
             </li>
           </ul>
@@ -29,11 +29,11 @@
     </div>
   </nav>
 
-  <!-- CU- Visualizar perfil del profesor -->
+  <!-- CU Visualizar perfil del profesor -->
   <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xs-offset-0 col-sm-offset-0 col-md-offset-3 col-lg-offset-3 toppad" >
     <div class="panel panel-info">
       <div class="panel-heading">
-        <h3 class="panel-title">Pablo Monestel</h3>
+        <h3 class="panel-title">{{vm.teacher.name}} {{vm.teacher.secondName}} {{vm.teacher.surName}} {{vm.teacher.secondSurName}}</h3>
       </div>
       <div class="panel-body">
         <div class="row">
@@ -43,46 +43,50 @@
           </div>
            <div class=" col-md-9 col-lg-9 "> 
              <table class="table table-user-information">
-               <tbody>
-                  <tr>
+               <tbody ng-model="teacher in vm.teachers">
+                  <tr> 
                     <td>Academias:</td>
-                    <td>Conejitos fitness</td>
+                    <td>Conejitos fitness</td> <!-- Falta, luego se añadirá -->
                   </tr>
-                      <tr>
-                        <td>Grado de cinta:</td>
-                        <td>Negro</td>
-                      </tr>
-                      <tr>
-                        <td>Correo electrónico:</td>
-                        <td> <a href="mailto:pabskun@gmail.com">pabskun@gmail.com</a></td>
-                      </tr>
-                      <tr>
-                      <tr>
-                        <td>Teléfono:</td>
-                        <td>+ (506) 8585-8585</td>
-                      </tr>
-                        <tr>
-                        <td>Género:</td>
-                        <td>Masculino</td>
-                      </tr>
-                      <tr>
-                        <td>Dirección:</td>
-                        <td>Curridabat, San José, Costa Rica</td>
-                      </tr>
-                        <td>Nacionalidad:</td>
-                        <td>Costarricense</td>
-                      </tr>
-                      <tr>
-                        <td>Estado civil:</td>
-                        <td>Soltero</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                  </div>
-              </div>
-              <div class="col-md-offset-10 btnEdit">
-                    <a href="" data-original-title="Editar datos personales" data-toggle="tooltip" type="button" class=" btn btn-sm btn-primary"><i class="glyphicon glyphicon-pencil"></i>Editar</a>
-                </div>
-            </div>
+                  <tr>
+                    <td>Grado de cinta:</td>
+                     <td>Negro</td>
+                  </tr>
+                   <tr>
+                     <td>Correo electrónico:</td>
+                    <td> <a href="mailto:{{vm.teacher.email}}">{{vm.teacher.email}}</a></td>
+                   </tr>
+                    <tr>
+                    <td>Teléfono:</td>
+                    <td>+ (506) {{vm.teacher.phone}}</td>
+                    </tr>
+                    <tr>
+                     <td>Género:</td> 
+                    <td>Masculino</td> <!-- Falta, luego se añadirá -->
+                   </tr>
+                    <tr>
+                     <td>Dirección:</td>
+                     <td>{{vm.teacher.address}}</td>
+                    </tr>
+                    <tr>
+                     <td>Nacionalidad:</td>
+                     <td>Costarricense</td> <!-- Falta, se añadirá luego -->
+                    </tr>
+                    <tr>
+                     <td>Estado civil:</td>
+                    <td>{{vm.teacher.civilStatus}}</td> 
+                    </tr>
+                  <tr>
+                     <td>Fecha de nacimiento:</td>
+                    <td>{{vm.teacher.birthDate | date}}</td>
+                  </tr>
+             </tbody>
+           </table>
           </div>
+        </div>
+        <div class="col-md-offset-10 btnEdit">
+          <a href="" data-original-title="Editar datos personales" data-toggle="tooltip" type="button" class=" btn btn-sm btn-primary"><i class="glyphicon glyphicon-pencil"></i>Editar</a>
+        </div>
+     </div>
+    </div>
 </section>

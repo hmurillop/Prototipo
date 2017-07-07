@@ -10,7 +10,7 @@
       	vm.academies = academyService.getAcademy();
       	vm.academy = {};
       }init();
-
+      //Sends the new academy to the service
       vm.save = function(pAcademy){
         academyService.setAcademy(pAcademy);
         vm.academy = {};
